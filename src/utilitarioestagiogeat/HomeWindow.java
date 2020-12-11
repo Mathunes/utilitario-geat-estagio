@@ -168,7 +168,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private void stylizeComponentes() {
         homeWindowPanel.setBackground(new Color(232, 243, 240));
         
-        titleWindow.setForeground(new Color(5, 51, 51));
+        titleWindow.setForeground(new Color(51, 51, 51));
         titleWindow.setFont(new Font("Roboto", Font.BOLD, 28));
         titleWindow.setBounds(35, 31, titleWindow.getPreferredSize().width, titleWindow.getPreferredSize().height);
         
