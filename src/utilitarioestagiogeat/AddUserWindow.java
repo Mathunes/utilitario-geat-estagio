@@ -132,6 +132,8 @@ public class AddUserWindow extends javax.swing.JFrame {
         btnClean.setFocusable(false);
         btnClean.setFont(new Font("Roboto", Font.BOLD, 14));
         btnClean.setForeground(new Color(255, 255, 255));
+        
+        jScrollPane1.setBorder(null);
     }
 
 }
