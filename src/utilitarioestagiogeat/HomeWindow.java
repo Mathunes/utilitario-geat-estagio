@@ -32,6 +32,11 @@ public class HomeWindow extends javax.swing.JFrame {
         titleWindow.setText("Utilitário GEAT");
 
         btnDeleteUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnDeleteUserIcon.png"))); // NOI18N
+        btnDeleteUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteUserActionPerformed(evt);
+            }
+        });
 
         btnAlterUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAlterUserIcon.png"))); // NOI18N
         btnAlterUser.addActionListener(new java.awt.event.ActionListener() {
@@ -41,10 +46,25 @@ public class HomeWindow extends javax.swing.JFrame {
         });
 
         btnAddUserIBM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserIBMIcon.png"))); // NOI18N
+        btnAddUserIBM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddUserIBMActionPerformed(evt);
+            }
+        });
 
         btnAddCC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddCCIcon.png"))); // NOI18N
+        btnAddCC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddCCActionPerformed(evt);
+            }
+        });
 
         btnAddUserOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserOutIcon.png"))); // NOI18N
+        btnAddUserOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddUserOutActionPerformed(evt);
+            }
+        });
 
         btnAddUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserIcon.png"))); // NOI18N
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
@@ -111,12 +131,28 @@ public class HomeWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnAlterUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterUserActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnAlterUserActionPerformed
+
+    private void btnDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteUserActionPerformed
+        
+    }//GEN-LAST:event_btnDeleteUserActionPerformed
+
+    private void btnAddUserIBMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserIBMActionPerformed
+        
+    }//GEN-LAST:event_btnAddUserIBMActionPerformed
+
+    private void btnAddCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCCActionPerformed
+        
+    }//GEN-LAST:event_btnAddCCActionPerformed
+
+    private void btnAddUserOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserOutActionPerformed
+        
+    }//GEN-LAST:event_btnAddUserOutActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddCC;

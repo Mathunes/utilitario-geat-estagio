@@ -109,6 +109,9 @@
               <Image iconType="3" name="/utilitarioestagiogeat/btnDeleteUserIcon.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteUserActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAlterUser">
           <Properties>
@@ -126,6 +129,9 @@
               <Image iconType="3" name="/utilitarioestagiogeat/btnAddUserIBMIcon.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddUserIBMActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAddCC">
           <Properties>
@@ -133,6 +139,9 @@
               <Image iconType="3" name="/utilitarioestagiogeat/btnAddCCIcon.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddCCActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAddUserOut">
           <Properties>
@@ -140,6 +149,9 @@
               <Image iconType="3" name="/utilitarioestagiogeat/btnAddUserOutIcon.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddUserOutActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAddUser">
           <Properties>
