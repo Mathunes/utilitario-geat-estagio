@@ -2,10 +2,12 @@ package utilitarioestagiogeat;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Toolkit;
 
 public class HomeWindow extends javax.swing.JFrame {
 
     public HomeWindow() {
+        super("Utilitário GEAT");
         initComponents();
         stylizeComponentes();
     }
@@ -219,5 +221,7 @@ public class HomeWindow extends javax.swing.JFrame {
         btnAddUserOut.setLocation(529, 280);
         btnAddUserOut.setBackground(new Color(255, 255, 255));
         btnAddUserOut.setFocusable(false);
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
 }

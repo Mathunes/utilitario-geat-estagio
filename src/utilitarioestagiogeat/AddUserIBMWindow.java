@@ -2,11 +2,13 @@ package utilitarioestagiogeat;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Toolkit;
 
 public class AddUserIBMWindow extends javax.swing.JFrame {
 
 
     public AddUserIBMWindow() {
+        super("Utilitário GEAT");
         initComponents();
         stylizeComponentes();
     }
@@ -202,5 +204,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
 }
