@@ -24,6 +24,7 @@ public class AddUserWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(768, 468));
+        setResizable(false);
 
         addUserWindowPanel.setMaximumSize(new java.awt.Dimension(776, 468));
         addUserWindowPanel.setMinimumSize(new java.awt.Dimension(776, 468));

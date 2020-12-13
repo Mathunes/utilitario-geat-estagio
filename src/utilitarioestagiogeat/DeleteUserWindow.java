@@ -23,6 +23,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         btnHomeWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         titleWindow.setText("Desligamento de pessoal");
 

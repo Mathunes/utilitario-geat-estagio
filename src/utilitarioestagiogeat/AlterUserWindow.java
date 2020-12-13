@@ -25,6 +25,7 @@ public class AlterUserWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(776, 468));
         setMinimumSize(new java.awt.Dimension(776, 468));
+        setResizable(false);
 
         alterUserWindowPanel.setMaximumSize(new java.awt.Dimension(776, 468));
         alterUserWindowPanel.setMinimumSize(new java.awt.Dimension(776, 468));

@@ -36,6 +36,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         btnHomeWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         addCCWindowPanel.setMaximumSize(new java.awt.Dimension(776, 468));
         addCCWindowPanel.setMinimumSize(new java.awt.Dimension(776, 468));
