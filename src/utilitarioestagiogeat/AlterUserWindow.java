@@ -114,6 +114,5 @@ public class AlterUserWindow extends javax.swing.JFrame {
         btnClean.setFont(new Font("Roboto", Font.BOLD, 14));
         btnClean.setForeground(new Color(255, 255, 255));
         
-        jScrollPane1.setBorder(null);
     }
 }
