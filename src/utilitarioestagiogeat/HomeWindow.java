@@ -1,8 +1,10 @@
 package utilitarioestagiogeat;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.net.URL;
 
 public class HomeWindow extends javax.swing.JFrame {
 
@@ -24,6 +26,7 @@ public class HomeWindow extends javax.swing.JFrame {
         btnAddCC = new javax.swing.JButton();
         btnAddUserOut = new javax.swing.JButton();
         btnAddUser = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -75,6 +78,13 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/githubIcon.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout homeWindowPanelLayout = new javax.swing.GroupLayout(homeWindowPanel);
         homeWindowPanel.setLayout(homeWindowPanelLayout);
         homeWindowPanelLayout.setHorizontalGroup(
@@ -82,7 +92,10 @@ public class HomeWindow extends javax.swing.JFrame {
             .addGroup(homeWindowPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleWindow)
+                    .addGroup(homeWindowPanelLayout.createSequentialGroup()
+                        .addComponent(titleWindow)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
                     .addGroup(homeWindowPanelLayout.createSequentialGroup()
                         .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -103,7 +116,9 @@ public class HomeWindow extends javax.swing.JFrame {
             homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homeWindowPanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(titleWindow)
+                .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(titleWindow)
+                    .addComponent(jLabel1))
                 .addGap(29, 29, 29)
                 .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -114,7 +129,7 @@ public class HomeWindow extends javax.swing.JFrame {
                     .addComponent(btnAddUserIBM, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddCC, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddUserOut, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -180,6 +195,14 @@ public class HomeWindow extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserOutActionPerformed
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        //Abrindo página do github
+        try {
+            Desktop.getDesktop().browse(new URL("https://github.com/Mathunes/utilitario-geat-estagio").toURI());
+        } catch (Exception e) {}
+
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddCC;
     private javax.swing.JButton btnAddUser;
@@ -188,6 +211,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnAlterUser;
     private javax.swing.JButton btnDeleteUser;
     private javax.swing.JPanel homeWindowPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
