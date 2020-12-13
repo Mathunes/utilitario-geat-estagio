@@ -16,6 +16,7 @@ public class AlterUserWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dataFontGroup = new javax.swing.ButtonGroup();
         alterUserWindowPanel = new javax.swing.JPanel();
         titleWindow = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -23,9 +24,11 @@ public class AlterUserWindow extends javax.swing.JFrame {
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
         btnHomeWindow = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(776, 468));
         setMinimumSize(new java.awt.Dimension(776, 468));
         setResizable(false);
 
@@ -47,22 +50,41 @@ public class AlterUserWindow extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Fonte de dados:");
+
+        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
+        dataFontGroup.add(jRadioButton1);
+        jRadioButton1.setText("Relatório SAMU");
+
+        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
+        dataFontGroup.add(jRadioButton2);
+        jRadioButton2.setText("Relatório Mainframe");
+
         javax.swing.GroupLayout alterUserWindowPanelLayout = new javax.swing.GroupLayout(alterUserWindowPanel);
         alterUserWindowPanel.setLayout(alterUserWindowPanelLayout);
         alterUserWindowPanelLayout.setHorizontalGroup(
             alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, alterUserWindowPanelLayout.createSequentialGroup()
+            .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnConvert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1)
+                .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
-                        .addComponent(titleWindow)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
-                        .addComponent(btnHomeWindow)
+                        .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(btnClean)))
-                .addGap(37, 37, 37))
+                        .addComponent(jRadioButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
+                        .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnConvert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1)
+                            .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
+                                .addComponent(titleWindow)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
+                                .addComponent(btnHomeWindow)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnClean)))
+                        .addGap(37, 37, 37))))
         );
         alterUserWindowPanelLayout.setVerticalGroup(
             alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -73,10 +95,15 @@ public class AlterUserWindow extends javax.swing.JFrame {
                     .addComponent(btnClean)
                     .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,7 +142,11 @@ public class AlterUserWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.ButtonGroup dataFontGroup;
     private javax.swing.JTextPane inputTextPane;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
@@ -140,6 +171,9 @@ public class AlterUserWindow extends javax.swing.JFrame {
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        jRadioButton1.setFocusable(false);
+        jRadioButton2.setFocusable(false);
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));        
     }
 }

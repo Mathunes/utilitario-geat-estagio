@@ -16,6 +16,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        serverGroup = new javax.swing.ButtonGroup();
         addUserOutWindowPanel = new javax.swing.JPanel();
         titleWindow = new javax.swing.JLabel();
         btnClean = new javax.swing.JButton();
@@ -34,6 +35,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         btnHomeWindow = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -68,6 +71,14 @@ public class AddUserOutWindow extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(jRadioButton1);
+        jRadioButton1.setText("Notes_1");
+
+        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(jRadioButton2);
+        jRadioButton2.setText("Notes_4");
+
         javax.swing.GroupLayout addUserOutWindowPanelLayout = new javax.swing.GroupLayout(addUserOutWindowPanel);
         addUserOutWindowPanel.setLayout(addUserOutWindowPanelLayout);
         addUserOutWindowPanelLayout.setHorizontalGroup(
@@ -93,10 +104,14 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(addUserOutWindowPanelLayout.createSequentialGroup()
-                                .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3)
-                                .addGap(312, 312, 312))
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton2)
+                                .addGap(90, 90, 90))
                             .addComponent(jTextField1)
                             .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField3)
@@ -120,7 +135,9 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                 .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
                 .addGap(17, 17, 17)
                 .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -186,12 +203,15 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.ButtonGroup serverGroup;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
@@ -214,6 +234,9 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
+        
+        jRadioButton1.setFocusable(false);
+        jRadioButton2.setFocusable(false);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }

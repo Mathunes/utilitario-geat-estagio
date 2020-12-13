@@ -18,6 +18,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup = new javax.swing.ButtonGroup();
         addUserIBMWindowPanel = new javax.swing.JPanel();
         titleWindow = new javax.swing.JLabel();
         btnClean = new javax.swing.JButton();
@@ -34,6 +35,8 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnHomeWindow = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -53,7 +56,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
 
         jLabel4.setText("name_complete");
 
-        jLabel5.setText("Lotação");
+        jLabel5.setText("Lotação (Área-Ger)");
 
         jLabel6.setText("Senha");
 
@@ -65,6 +68,14 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                 btnHomeWindowMouseClicked(evt);
             }
         });
+
+        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
+        buttonGroup.add(jRadioButton1);
+        jRadioButton1.setText("USERDFLT");
+
+        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
+        buttonGroup.add(jRadioButton2);
+        jRadioButton2.setText("EXTERNOS");
 
         javax.swing.GroupLayout addUserIBMWindowPanelLayout = new javax.swing.GroupLayout(addUserIBMWindowPanel);
         addUserIBMWindowPanel.setLayout(addUserIBMWindowPanelLayout);
@@ -97,7 +108,11 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3)
-                                .addGap(0, 338, Short.MAX_VALUE)))))
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton2)
+                                .addGap(0, 132, Short.MAX_VALUE)))))
                 .addGap(37, 37, 37))
         );
         addUserIBMWindowPanelLayout.setVerticalGroup(
@@ -128,7 +143,9 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
                 .addGap(18, 18, 18)
                 .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -171,12 +188,15 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -204,6 +224,9 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
+        
+        jRadioButton1.setFocusable(false);
+        jRadioButton2.setFocusable(false);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }

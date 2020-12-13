@@ -16,6 +16,8 @@ public class AddCCWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        serverGroup = new javax.swing.ButtonGroup();
+        notificationAgentGroup = new javax.swing.ButtonGroup();
         addCCWindowPanel = new javax.swing.JPanel();
         titleWindow = new javax.swing.JLabel();
         btnClean = new javax.swing.JButton();
@@ -36,6 +38,10 @@ public class AddCCWindow extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         btnHomeWindow = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -74,6 +80,22 @@ public class AddCCWindow extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(jRadioButton1);
+        jRadioButton1.setText("Notes_1");
+
+        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(jRadioButton2);
+        jRadioButton2.setText("Notes_4");
+
+        jRadioButton3.setBackground(new java.awt.Color(232, 243, 240));
+        notificationAgentGroup.add(jRadioButton3);
+        jRadioButton3.setText("Sim");
+
+        jRadioButton4.setBackground(new java.awt.Color(232, 243, 240));
+        notificationAgentGroup.add(jRadioButton4);
+        jRadioButton4.setText("Não");
+
         javax.swing.GroupLayout addCCWindowPanelLayout = new javax.swing.GroupLayout(addCCWindowPanel);
         addCCWindowPanel.setLayout(addCCWindowPanelLayout);
         addCCWindowPanelLayout.setHorizontalGroup(
@@ -101,7 +123,11 @@ public class AddCCWindow extends javax.swing.JFrame {
                                     .addComponent(jTextField2)
                                     .addGap(18, 18, 18)
                                     .addComponent(jLabel3)
-                                    .addGap(326, 326, 326))
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jRadioButton1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jRadioButton2)
+                                    .addGap(104, 104, 104))
                                 .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCCWindowPanelLayout.createSequentialGroup()
                         .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +140,11 @@ public class AddCCWindow extends javax.swing.JFrame {
                             .addGroup(addCCWindowPanelLayout.createSequentialGroup()
                                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel7))
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton4))
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(37, 37, 37))
@@ -135,7 +165,9 @@ public class AddCCWindow extends javax.swing.JFrame {
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,7 +180,9 @@ public class AddCCWindow extends javax.swing.JFrame {
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7)
+                    .addComponent(jRadioButton3)
+                    .addComponent(jRadioButton4))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -203,6 +237,10 @@ public class AddCCWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -210,6 +248,8 @@ public class AddCCWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.ButtonGroup notificationAgentGroup;
+    private javax.swing.ButtonGroup serverGroup;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
@@ -232,6 +272,12 @@ public class AddCCWindow extends javax.swing.JFrame {
         
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
+        
+        jRadioButton1.setFocusable(false);
+        jRadioButton2.setFocusable(false);
+        
+        jRadioButton3.setFocusable(false);
+        jRadioButton4.setFocusable(false);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
