@@ -131,27 +131,51 @@ public class HomeWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+        dispose();
         
+        AddUserWindow frame = new AddUserWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnAlterUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterUserActionPerformed
+        dispose();
         
+        AlterUserWindow frame = new AlterUserWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAlterUserActionPerformed
 
     private void btnDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteUserActionPerformed
+        dispose();
         
+        DeleteUserWindow frame = new DeleteUserWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnDeleteUserActionPerformed
 
     private void btnAddUserIBMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserIBMActionPerformed
+        dispose();
         
+        AddUserIBMWindow frame = new AddUserIBMWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserIBMActionPerformed
 
     private void btnAddCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCCActionPerformed
+        dispose();
         
+        AddCCWindow frame = new AddCCWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAddCCActionPerformed
 
     private void btnAddUserOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserOutActionPerformed
+        dispose();
         
+        AddUserOutWindow frame = new AddUserOutWindow();
+        
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserOutActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -20,6 +20,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         inputTextPane = new javax.swing.JTextPane();
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
+        btnHomeWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -30,6 +31,13 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         btnClean.setText("Limpar");
 
         btnConvert.setText("Converter");
+
+        btnHomeWindow.setText("Página Inicial");
+        btnHomeWindow.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHomeWindowMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteUserWindowPanelLayout = new javax.swing.GroupLayout(deleteUserWindowPanel);
         deleteUserWindowPanel.setLayout(deleteUserWindowPanelLayout);
@@ -42,7 +50,9 @@ public class DeleteUserWindow extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(deleteUserWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 521, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 441, Short.MAX_VALUE)
+                        .addComponent(btnHomeWindow)
+                        .addGap(18, 18, 18)
                         .addComponent(btnClean)))
                 .addGap(37, 37, 37))
         );
@@ -52,7 +62,8 @@ public class DeleteUserWindow extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(deleteUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
-                    .addComponent(btnClean))
+                    .addComponent(btnClean)
+                    .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -75,6 +86,14 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        dispose();
+
+        HomeWindow frame = new HomeWindow();
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnHomeWindowMouseClicked
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -86,6 +105,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
+    private javax.swing.JLabel btnHomeWindow;
     private javax.swing.JPanel deleteUserWindowPanel;
     private javax.swing.JTextPane inputTextPane;
     private javax.swing.JScrollPane jScrollPane1;
@@ -109,6 +129,8 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         btnClean.setFont(new Font("Roboto", Font.BOLD, 14));
         btnClean.setForeground(new Color(255, 255, 255));
         
+        btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
+        btnHomeWindow.setForeground(new Color(44, 94, 95));
     }
     
 }

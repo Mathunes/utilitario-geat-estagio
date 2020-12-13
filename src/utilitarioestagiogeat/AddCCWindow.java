@@ -33,6 +33,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        btnHomeWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +64,13 @@ public class AddCCWindow extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jTextPane1);
 
+        btnHomeWindow.setText("Página Inicial");
+        btnHomeWindow.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHomeWindowMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout addCCWindowPanelLayout = new javax.swing.GroupLayout(addCCWindowPanel);
         addCCWindowPanel.setLayout(addCCWindowPanelLayout);
         addCCWindowPanelLayout.setHorizontalGroup(
@@ -74,6 +82,8 @@ public class AddCCWindow extends javax.swing.JFrame {
                     .addGroup(addCCWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnHomeWindow)
+                        .addGap(18, 18, 18)
                         .addComponent(btnClean))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCCWindowPanelLayout.createSequentialGroup()
                         .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +112,8 @@ public class AddCCWindow extends javax.swing.JFrame {
                                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7))
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(37, 37, 37))
         );
         addCCWindowPanelLayout.setVerticalGroup(
@@ -111,7 +122,8 @@ public class AddCCWindow extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
-                    .addComponent(btnClean))
+                    .addComponent(btnClean)
+                    .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,6 +170,14 @@ public class AddCCWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        dispose();
+
+        HomeWindow frame = new HomeWindow();
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnHomeWindowMouseClicked
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -171,6 +191,7 @@ public class AddCCWindow extends javax.swing.JFrame {
     private javax.swing.JPanel addCCWindowPanel;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
+    private javax.swing.JLabel btnHomeWindow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -206,5 +227,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         btnClean.setFont(new Font("Roboto", Font.BOLD, 14));
         btnClean.setForeground(new Color(255, 255, 255));
         
+        btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
+        btnHomeWindow.setForeground(new Color(44, 94, 95));
     }
 }

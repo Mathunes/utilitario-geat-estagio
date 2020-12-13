@@ -31,6 +31,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
+        btnHomeWindow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -38,7 +39,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         addUserOutWindowPanel.setMaximumSize(new java.awt.Dimension(776, 468));
         addUserOutWindowPanel.setMinimumSize(new java.awt.Dimension(776, 468));
 
-        titleWindow.setText("Criação de caixa corporativa");
+        titleWindow.setText("Criação de terceiro");
 
         btnClean.setText("Limpar");
 
@@ -58,6 +59,13 @@ public class AddUserOutWindow extends javax.swing.JFrame {
 
         jLabel8.setText("Empresa");
 
+        btnHomeWindow.setText("Página Inicial");
+        btnHomeWindow.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnHomeWindowMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout addUserOutWindowPanelLayout = new javax.swing.GroupLayout(addUserOutWindowPanel);
         addUserOutWindowPanel.setLayout(addUserOutWindowPanelLayout);
         addUserOutWindowPanelLayout.setHorizontalGroup(
@@ -69,6 +77,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addUserOutWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnHomeWindow)
+                        .addGap(18, 18, 18)
                         .addComponent(btnClean))
                     .addGroup(addUserOutWindowPanelLayout.createSequentialGroup()
                         .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +108,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
-                    .addComponent(btnClean))
+                    .addComponent(btnClean)
+                    .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
                 .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,6 +155,14 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        dispose();
+
+        HomeWindow frame = new HomeWindow();
+
+        frame.setVisible(true);
+    }//GEN-LAST:event_btnHomeWindowMouseClicked
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -157,6 +176,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     private javax.swing.JPanel addUserOutWindowPanel;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
+    private javax.swing.JLabel btnHomeWindow;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -190,5 +210,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         btnClean.setFont(new Font("Roboto", Font.BOLD, 14));
         btnClean.setForeground(new Color(255, 255, 255));
         
+        btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
+        btnHomeWindow.setForeground(new Color(44, 94, 95));
     }
 }

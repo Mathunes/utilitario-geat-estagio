@@ -53,6 +53,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="titleWindow" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnHomeWindow" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnClean" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -91,6 +93,7 @@
                               </Group>
                               <Component id="jTextField4" min="-2" pref="600" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -104,6 +107,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="titleWindow" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnClean" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnHomeWindow" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -221,6 +225,14 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="btnHomeWindow">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="P&#xe1;gina Inicial"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnHomeWindowMouseClicked"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
