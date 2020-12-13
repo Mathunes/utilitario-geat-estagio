@@ -3,9 +3,9 @@ package utilitarioestagiogeat;
 import java.awt.Color;
 import java.awt.Font;
 
-public class AddUserWindow extends javax.swing.JFrame {
+public class AlterUserWindow extends javax.swing.JFrame {
 
-    public AddUserWindow() {
+    public AlterUserWindow() {
         initComponents();
         stylizeComponentes();
     }
@@ -14,20 +14,14 @@ public class AddUserWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        addUserWindowPanel = new javax.swing.JPanel();
+        alterUserWindowPane1 = new javax.swing.JPanel();
+        btnClean = new javax.swing.JButton();
         titleWindow = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         inputTextPane = new javax.swing.JTextPane();
         btnConvert = new javax.swing.JButton();
-        btnClean = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        titleWindow.setText("Entrada de pessoal");
-
-        jScrollPane1.setViewportView(inputTextPane);
-
-        btnConvert.setText("Converter");
 
         btnClean.setText("Limpar");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
@@ -36,14 +30,20 @@ public class AddUserWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout addUserWindowPanelLayout = new javax.swing.GroupLayout(addUserWindowPanel);
-        addUserWindowPanel.setLayout(addUserWindowPanelLayout);
-        addUserWindowPanelLayout.setHorizontalGroup(
-            addUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addUserWindowPanelLayout.createSequentialGroup()
+        titleWindow.setText("Entrada de pessoal");
+
+        jScrollPane1.setViewportView(inputTextPane);
+
+        btnConvert.setText("Converter");
+
+        javax.swing.GroupLayout alterUserWindowPane1Layout = new javax.swing.GroupLayout(alterUserWindowPane1);
+        alterUserWindowPane1.setLayout(alterUserWindowPane1Layout);
+        alterUserWindowPane1Layout.setHorizontalGroup(
+            alterUserWindowPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(alterUserWindowPane1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(addUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(addUserWindowPanelLayout.createSequentialGroup()
+                .addGroup(alterUserWindowPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(alterUserWindowPane1Layout.createSequentialGroup()
                         .addComponent(titleWindow)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClean))
@@ -51,11 +51,11 @@ public class AddUserWindow extends javax.swing.JFrame {
                     .addComponent(btnConvert, javax.swing.GroupLayout.DEFAULT_SIZE, 704, Short.MAX_VALUE))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
-        addUserWindowPanelLayout.setVerticalGroup(
-            addUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addUserWindowPanelLayout.createSequentialGroup()
+        alterUserWindowPane1Layout.setVerticalGroup(
+            alterUserWindowPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(alterUserWindowPane1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(addUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(alterUserWindowPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
                     .addComponent(btnClean))
                 .addGap(18, 18, 18)
@@ -69,15 +69,14 @@ public class AddUserWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addUserWindowPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(alterUserWindowPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addUserWindowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(alterUserWindowPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
@@ -98,35 +97,35 @@ public class AddUserWindow extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AlterUserWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddUserWindow().setVisible(true);
+                new AlterUserWindow().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel addUserWindowPanel;
+    private javax.swing.JPanel alterUserWindowPane1;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JTextPane inputTextPane;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
-    
+
     private void stylizeComponentes() {
-        addUserWindowPanel.setBackground(new Color(232, 243, 240));
+        alterUserWindowPane1.setBackground(new Color(232, 243, 240));
         
         titleWindow.setForeground(new Color(51, 51, 51));
         titleWindow.setFont(new Font("Roboto", Font.BOLD, 20));
@@ -144,5 +143,4 @@ public class AddUserWindow extends javax.swing.JFrame {
         
         jScrollPane1.setBorder(null);
     }
-
 }
