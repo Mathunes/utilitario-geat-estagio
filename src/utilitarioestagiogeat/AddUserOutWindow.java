@@ -210,7 +210,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         
         result = inputCompany.getText() + "." + inputName.getText() + " - Terceiro\n" +
             inputID.getText() + "\n" +
-            "Usuário(a) " + inputCompany.getText() + "." + inputName.getText() + " criado(a) no " + server + " externos\\cp\\cp_" + inputID.getText() + ".nsf" + "\n" +
+            "Usuário(a) " + inputCompany.getText() + "." + inputName.getText() + " criado(a) no " + server + "/BNDES externos\\cp\\cp_" + inputID.getText() + ".nsf" + "\n" +
             "Internet Address: " + inputEmail.getText() + "\n" +
             date + " - " + inputIncident.getText() + "\n" +
             "Responsável: " + inputResponsible.getText() + "\n" +
@@ -248,15 +248,6 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         inputName.setText("");
         inputResponsible.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
-
-    public static void main(String args[]) {
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AddUserOutWindow().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserOutWindowPanel;

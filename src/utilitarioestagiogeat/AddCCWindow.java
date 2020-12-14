@@ -3,9 +3,14 @@ package utilitarioestagiogeat;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
 
 public class AddCCWindow extends javax.swing.JFrame {
 
+    private String result;
+    
     public AddCCWindow() {
         super("Utilitário GEAT");
         initComponents();
@@ -22,26 +27,26 @@ public class AddCCWindow extends javax.swing.JFrame {
         titleWindow = new javax.swing.JLabel();
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        inputName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        inputID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        inputEmail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        inputResponsible = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        inputIncident = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        inputMembers = new javax.swing.JTextPane();
         btnHomeWindow = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        radioNotes1 = new javax.swing.JRadioButton();
+        radioNotes4 = new javax.swing.JRadioButton();
+        radioNotificationAgentTrue = new javax.swing.JRadioButton();
+        radioNotificationAgentFalse = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -52,8 +57,18 @@ public class AddCCWindow extends javax.swing.JFrame {
         titleWindow.setText("Criação de caixa corporativa");
 
         btnClean.setText("Limpar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Gerar");
+        btnConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nome da caixa");
 
@@ -71,7 +86,7 @@ public class AddCCWindow extends javax.swing.JFrame {
 
         jLabel8.setText("Integrantes");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(inputMembers);
 
         btnHomeWindow.setText("Página Inicial");
         btnHomeWindow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,21 +95,21 @@ public class AddCCWindow extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
-        serverGroup.add(jRadioButton1);
-        jRadioButton1.setText("Notes_1");
+        radioNotes1.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(radioNotes1);
+        radioNotes1.setText("Notes_1");
 
-        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
-        serverGroup.add(jRadioButton2);
-        jRadioButton2.setText("Notes_4");
+        radioNotes4.setBackground(new java.awt.Color(232, 243, 240));
+        serverGroup.add(radioNotes4);
+        radioNotes4.setText("Notes_4");
 
-        jRadioButton3.setBackground(new java.awt.Color(232, 243, 240));
-        notificationAgentGroup.add(jRadioButton3);
-        jRadioButton3.setText("Sim");
+        radioNotificationAgentTrue.setBackground(new java.awt.Color(232, 243, 240));
+        notificationAgentGroup.add(radioNotificationAgentTrue);
+        radioNotificationAgentTrue.setText("Sim");
 
-        jRadioButton4.setBackground(new java.awt.Color(232, 243, 240));
-        notificationAgentGroup.add(jRadioButton4);
-        jRadioButton4.setText("Não");
+        radioNotificationAgentFalse.setBackground(new java.awt.Color(232, 243, 240));
+        notificationAgentGroup.add(radioNotificationAgentFalse);
+        radioNotificationAgentFalse.setText("Não");
 
         javax.swing.GroupLayout addCCWindowPanelLayout = new javax.swing.GroupLayout(addCCWindowPanel);
         addCCWindowPanel.setLayout(addCCWindowPanelLayout);
@@ -117,18 +132,18 @@ public class AddCCWindow extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCCWindowPanelLayout.createSequentialGroup()
-                                    .addComponent(jTextField2)
+                                    .addComponent(inputID)
                                     .addGap(18, 18, 18)
                                     .addComponent(jLabel3)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton1)
+                                    .addComponent(radioNotes1)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jRadioButton2)
+                                    .addComponent(radioNotes4)
                                     .addGap(104, 104, 104))
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(inputName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCCWindowPanelLayout.createSequentialGroup()
                         .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
@@ -138,14 +153,14 @@ public class AddCCWindow extends javax.swing.JFrame {
                         .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(addCCWindowPanelLayout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inputIncident, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton3)
+                                .addComponent(radioNotificationAgentTrue)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton4))
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(radioNotificationAgentFalse))
+                            .addComponent(inputResponsible, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(37, 37, 37))
         );
@@ -159,30 +174,30 @@ public class AddCCWindow extends javax.swing.JFrame {
                     .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(radioNotes1)
+                    .addComponent(radioNotes4))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputResponsible, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputIncident, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(radioNotificationAgentTrue)
+                    .addComponent(radioNotificationAgentFalse))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -215,20 +230,76 @@ public class AddCCWindow extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
-    public static void main(String args[]) {
+    private void buildString() {
+        
+        Date dateNow = new Date();
+        String date = new SimpleDateFormat("dd/MM/yyyy").format(dateNow);
+        String server, notificationAgent;
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AddCCWindow().setVisible(true);
-            }
-        });
+        if (radioNotes1.isSelected())
+            server = "Notes_1";
+        else
+            server = "Notes_4";
+        
+        if (radioNotificationAgentTrue.isSelected())
+            notificationAgent = "Sim";
+        else
+            notificationAgent = "Não";
+        
+        result = "Caixa Institucional - " + inputName.getText() + "\n" +
+            inputID.getText() + "\n" +
+            "Caixa Institucional " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\cc_" + inputID.getText() + ".nsf" + "\n" +
+            "Internet Address: " + inputEmail.getText() + "\n" +
+            "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
+            "Responsável: " + inputResponsible.getText() + "\n" +
+            date + " - " + inputIncident.getText() + "\n" +
+            "Integrantes: " + inputMembers.getText() + "\n" +
+            "Agente de Notificação: " + notificationAgent;
     }
+    
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
+        if (inputMembers.getText().equals("") || 
+                inputEmail.getText().equals("") ||
+                inputID.getText().equals("") ||
+                inputIncident.getText().equals("") ||
+                inputName.getText().equals("") ||
+                inputResponsible.getText().equals("")
+            ) {
+            JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else if (!(radioNotes1.isSelected() || radioNotes4.isSelected())) {
+            JOptionPane.showMessageDialog(rootPane, "Escolha o servidor de criação!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else if (!(radioNotificationAgentTrue.isSelected() || radioNotificationAgentFalse.isSelected())) {
+            JOptionPane.showMessageDialog(rootPane, "Defina se a caixa possui ou não agente de notificação", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else {
+            
+            buildString();
+                    
+            ResultWindow frame = new ResultWindow(result);
+        
+            frame.setVisible(true);
+        }
+    }//GEN-LAST:event_btnConvertActionPerformed
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        inputMembers.setText("");
+        inputEmail.setText("");
+        inputID.setText("");
+        inputIncident.setText("");
+        inputName.setText("");
+        inputResponsible.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addCCWindowPanel;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JTextField inputEmail;
+    private javax.swing.JTextField inputID;
+    private javax.swing.JTextField inputIncident;
+    private javax.swing.JTextPane inputMembers;
+    private javax.swing.JTextField inputName;
+    private javax.swing.JTextField inputResponsible;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -237,18 +308,12 @@ public class AddCCWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.ButtonGroup notificationAgentGroup;
+    private javax.swing.JRadioButton radioNotes1;
+    private javax.swing.JRadioButton radioNotes4;
+    private javax.swing.JRadioButton radioNotificationAgentFalse;
+    private javax.swing.JRadioButton radioNotificationAgentTrue;
     private javax.swing.ButtonGroup serverGroup;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
@@ -273,11 +338,11 @@ public class AddCCWindow extends javax.swing.JFrame {
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
         
-        jRadioButton1.setFocusable(false);
-        jRadioButton2.setFocusable(false);
+        radioNotes1.setFocusable(false);
+        radioNotes4.setFocusable(false);
         
-        jRadioButton3.setFocusable(false);
-        jRadioButton4.setFocusable(false);
+        radioNotificationAgentTrue.setFocusable(false);
+        radioNotificationAgentFalse.setFocusable(false);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
