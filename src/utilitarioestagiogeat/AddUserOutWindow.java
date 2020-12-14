@@ -52,6 +52,11 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         titleWindow.setText("Criação de terceiro");
 
         btnClean.setText("Limpar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Gerar");
         btnConvert.addActionListener(new java.awt.event.ActionListener() {
@@ -234,6 +239,15 @@ public class AddUserOutWindow extends javax.swing.JFrame {
             frame.setVisible(true);
         }
     }//GEN-LAST:event_btnConvertActionPerformed
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        inputCompany.setText("");
+        inputEmail.setText("");
+        inputID.setText("");
+        inputIncident.setText("");
+        inputName.setText("");
+        inputResponsible.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     public static void main(String args[]) {
 
