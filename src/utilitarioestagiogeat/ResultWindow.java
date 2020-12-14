@@ -2,12 +2,21 @@ package utilitarioestagiogeat;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 
 public class ResultWindow extends javax.swing.JFrame {
 
-    public ResultWindow() {
+    private String result;
+    
+    public ResultWindow(String result) {
         initComponents();
         stylizeComponentes();
+
+        this.result = result;
+        
+        showResult();
     }
 
     @SuppressWarnings("unchecked")
@@ -16,7 +25,7 @@ public class ResultWindow extends javax.swing.JFrame {
 
         resultWindowPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        inputTextPane = new javax.swing.JTextPane();
+        resultPane = new javax.swing.JTextPane();
         btnConvert = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -27,11 +36,21 @@ public class ResultWindow extends javax.swing.JFrame {
         resultWindowPanel.setMaximumSize(new java.awt.Dimension(776, 468));
         resultWindowPanel.setMinimumSize(new java.awt.Dimension(776, 468));
 
-        jScrollPane1.setViewportView(inputTextPane);
+        jScrollPane1.setViewportView(resultPane);
 
         btnConvert.setText("Copiar");
+        btnConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertActionPerformed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/close.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout resultWindowPanelLayout = new javax.swing.GroupLayout(resultWindowPanel);
         resultWindowPanel.setLayout(resultWindowPanelLayout);
@@ -72,31 +91,36 @@ public class ResultWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public static void main(String args[]) {
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ResultWindow().setVisible(true);
-            }
-        });
-    }
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        StringSelection selection = new StringSelection(result);
+        clipboard.setContents(selection, null);
+    }//GEN-LAST:event_btnConvertActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConvert;
-    private javax.swing.JTextPane inputTextPane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane resultPane;
     private javax.swing.JPanel resultWindowPanel;
     // End of variables declaration//GEN-END:variables
 
     private void stylizeComponentes() {
         resultWindowPanel.setBackground(new Color(255, 187, 192));
-        
+
         btnConvert.setBackground(new Color(17, 125, 125));
         btnConvert.setFocusable(false);
         btnConvert.setFont(new Font("Roboto", Font.BOLD, 18));
         btnConvert.setForeground(new Color(255, 255, 255));
-        
+
         jScrollPane1.setFocusable(false);
+    }
+
+    private void showResult() {
+        resultPane.setText(result);
     }
 }

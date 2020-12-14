@@ -229,7 +229,9 @@ public class AddUserOutWindow extends javax.swing.JFrame {
             
             buildString();
                     
-            System.out.println(result);
+            ResultWindow frame = new ResultWindow(result);
+        
+            frame.setVisible(true);
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
