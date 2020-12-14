@@ -11,6 +11,7 @@ public class ResultWindow extends javax.swing.JFrame {
     private String result;
     
     public ResultWindow(String result) {
+        super("Utilitário GEAT");
         initComponents();
         stylizeComponentes();
 
@@ -118,6 +119,8 @@ public class ResultWindow extends javax.swing.JFrame {
         btnConvert.setForeground(new Color(255, 255, 255));
 
         jScrollPane1.setFocusable(false);
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
 
     private void showResult() {
