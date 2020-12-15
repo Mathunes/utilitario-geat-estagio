@@ -3,9 +3,11 @@ package utilitarioestagiogeat;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 public class AddUserIBMWindow extends javax.swing.JFrame {
 
+    private String result;
 
     public AddUserIBMWindow() {
         super("Utilitário GEAT");
@@ -23,20 +25,20 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         titleWindow = new javax.swing.JLabel();
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        inputID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        inputNameTSO = new javax.swing.JTextField();
+        inputNameComplete = new javax.swing.JTextField();
+        inputArea = new javax.swing.JTextField();
+        inputPassword = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnHomeWindow = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        radioUserDefault = new javax.swing.JRadioButton();
+        radioUserExternal = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -47,8 +49,18 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         titleWindow.setText("Criação de usuário IBM");
 
         btnClean.setText("Limpar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Gerar");
+        btnConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("ID do usuário");
 
@@ -69,13 +81,13 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
             }
         });
 
-        jRadioButton1.setBackground(new java.awt.Color(232, 243, 240));
-        buttonGroup.add(jRadioButton1);
-        jRadioButton1.setText("USERDFLT");
+        radioUserDefault.setBackground(new java.awt.Color(232, 243, 240));
+        buttonGroup.add(radioUserDefault);
+        radioUserDefault.setText("USERDFLT");
 
-        jRadioButton2.setBackground(new java.awt.Color(232, 243, 240));
-        buttonGroup.add(jRadioButton2);
-        jRadioButton2.setText("EXTERNOS");
+        radioUserExternal.setBackground(new java.awt.Color(232, 243, 240));
+        buttonGroup.add(radioUserExternal);
+        radioUserExternal.setText("EXTERNOS");
 
         javax.swing.GroupLayout addUserIBMWindowPanelLayout = new javax.swing.GroupLayout(addUserIBMWindowPanel);
         addUserIBMWindowPanel.setLayout(addUserIBMWindowPanelLayout);
@@ -100,18 +112,18 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(29, 29, 29)
                         .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField7)
+                            .addComponent(inputID)
+                            .addComponent(inputNameComplete, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(inputArea)
+                            .addComponent(inputNameTSO)
                             .addGroup(addUserIBMWindowPanelLayout.createSequentialGroup()
-                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton1)
+                                .addComponent(radioUserDefault)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton2)
+                                .addComponent(radioUserExternal)
                                 .addGap(0, 132, Short.MAX_VALUE)))))
                 .addGap(37, 37, 37))
         );
@@ -125,27 +137,27 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                     .addComponent(btnHomeWindow))
                 .addGap(18, 18, 18)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputNameTSO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputNameComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputArea, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(radioUserDefault)
+                    .addComponent(radioUserExternal))
                 .addGap(18, 18, 18)
                 .addComponent(btnConvert, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -174,14 +186,54 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
-    public static void main(String args[]) {
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AddUserIBMWindow().setVisible(true);
-            }
-        });
+    private void buildString() {
+        String group;
+        
+        if (radioUserDefault.isSelected())
+            group = "USERDFLT";
+        else
+            group = "EXTERNOS";
+        
+        result = "- username: " + inputID.getText().toUpperCase() + "\n" +
+            "  name_tso: " + inputNameTSO.getText().toUpperCase() + "\n" +
+            "  name_complete: " + inputNameComplete.getText().toUpperCase() + "\n" +
+            "  copy: USUAR\n" +
+            "  org_unit: " + inputArea.getText().toUpperCase() + "\n" +
+            "  password: " + inputPassword.getText() + "\n" +
+            "  group: " + group + "\n";
     }
+    
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
+        if (inputArea.getText().equals("") || 
+                inputNameTSO.getText().equals("") ||
+                inputNameComplete.getText().equals("") ||
+                inputID.getText().equals("") ||
+                inputPassword.getText().equals("")
+            ) {
+            JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else if (!(radioUserDefault.isSelected() || radioUserExternal.isSelected())) {
+            JOptionPane.showMessageDialog(rootPane, "Escolha o grupo!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else if (inputNameTSO.getText().length() > 20) {
+            JOptionPane.showMessageDialog(rootPane, "name_tso tem " + inputNameTSO.getText().length() + " caracteres, deve ter no máximo 20!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else if (inputNameComplete.getText().length() > 32) {
+            JOptionPane.showMessageDialog(rootPane, "name_complete tem " + inputNameComplete.getText().length() + " caracteres, deve ter no máximo 32!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else {
+            
+            buildString();
+                    
+            ResultWindow frame = new ResultWindow(result);
+        
+            frame.setVisible(true);
+        }
+    }//GEN-LAST:event_btnConvertActionPerformed
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        inputArea.setText("");
+        inputID.setText("");
+        inputNameComplete.setText("");
+        inputNameTSO.setText("");
+        inputPassword.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserIBMWindowPanel;
@@ -189,19 +241,19 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
     private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JTextField inputArea;
+    private javax.swing.JTextField inputID;
+    private javax.swing.JTextField inputNameComplete;
+    private javax.swing.JTextField inputNameTSO;
+    private javax.swing.JTextField inputPassword;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JRadioButton radioUserDefault;
+    private javax.swing.JRadioButton radioUserExternal;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
@@ -225,8 +277,8 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
         
-        jRadioButton1.setFocusable(false);
-        jRadioButton2.setFocusable(false);
+        radioUserDefault.setFocusable(false);
+        radioUserExternal.setFocusable(false);
         
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
     }
