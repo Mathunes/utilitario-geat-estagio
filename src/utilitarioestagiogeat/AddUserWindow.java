@@ -45,6 +45,11 @@ public class AddUserWindow extends javax.swing.JFrame {
         jScrollPane1.setViewportView(textArea);
 
         btnClean.setText("Limpar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Converter");
         btnConvert.addActionListener(new java.awt.event.ActionListener() {
@@ -242,13 +247,9 @@ public class AddUserWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AddUserWindow().setVisible(true);
-            }
-        });
-    }
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        textArea.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserWindowPanel;
