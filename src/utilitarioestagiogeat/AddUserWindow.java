@@ -14,6 +14,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     private String email = "";
     private String office = "";
     private int notes = 4;
+    private Boolean firstUser;
     
     public AddUserWindow() {
         super("Utilitário GEAT");
@@ -130,21 +131,36 @@ public class AddUserWindow extends javax.swing.JFrame {
         else
             notes = 4;
         
-        textArea.setText(textArea.getText()
-            + "\n\n" + name + " - " + office + "\n"
-            + userId + "\n"
-            + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
-            + "Internet Address: " + email + "\n"
-            + "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + userId + ".id\n"
-            + date + "\n"
-            + area + "\n"
-            + "CN=" + userId.toUpperCase() + "/CN=Users/DC=bndes/DC=net"
-        );
+        if (firstUser) {
+            textArea.setText(textArea.getText()
+                + name + " - " + office + "\n"
+                + userId + "\n"
+                + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
+                + "Internet Address: " + email + "\n"
+                + "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + userId + ".id\n"
+                + date + "\n"
+                + area + "\n"
+                + "CN=" + userId.toUpperCase() + "/CN=Users/DC=bndes/DC=net"
+            );
+            
+            firstUser = false;
+        } else
+            textArea.setText(textArea.getText()
+                + "\n\n" + name + " - " + office + "\n"
+                + userId + "\n"
+                + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
+                + "Internet Address: " + email + "\n"
+                + "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + userId + ".id\n"
+                + date + "\n"
+                + area + "\n"
+                + "CN=" + userId.toUpperCase() + "/CN=Users/DC=bndes/DC=net"
+            );
     
     }
     
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         
+        firstUser = true;
         String textInput = textArea.getText().trim();
         textArea.setText("");
         
