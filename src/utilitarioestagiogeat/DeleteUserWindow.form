@@ -87,7 +87,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="inputTextPane">
+            <Component class="javax.swing.JTextPane" name="textArea">
             </Component>
           </SubComponents>
         </Container>
@@ -95,11 +95,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnConvert">
           <Properties>
             <Property name="text" type="java.lang.String" value="Converter"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConvertActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="btnHomeWindow">
           <Properties>

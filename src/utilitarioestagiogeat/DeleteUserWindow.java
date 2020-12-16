@@ -6,6 +6,8 @@ import java.awt.Toolkit;
 
 public class DeleteUserWindow extends javax.swing.JFrame {
 
+    private String userId = "";
+    
     public DeleteUserWindow() {
         super("Utilitário GEAT");
         initComponents();
@@ -19,7 +21,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         deleteUserWindowPanel = new javax.swing.JPanel();
         titleWindow = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        inputTextPane = new javax.swing.JTextPane();
+        textArea = new javax.swing.JTextPane();
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
         btnHomeWindow = new javax.swing.JLabel();
@@ -29,11 +31,21 @@ public class DeleteUserWindow extends javax.swing.JFrame {
 
         titleWindow.setText("Desligamento de pessoal");
 
-        jScrollPane1.setViewportView(inputTextPane);
+        jScrollPane1.setViewportView(textArea);
 
         btnClean.setText("Limpar");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnConvert.setText("Converter");
+        btnConvert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConvertActionPerformed(evt);
+            }
+        });
 
         btnHomeWindow.setText("Página Inicial");
         btnHomeWindow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,21 +109,65 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DeleteUserWindow().setVisible(true);
-            }
-        });
+    private void buildResult() {
+        textArea.setText(textArea.getText() + "- username: " + userId.toUpperCase() + "\n");
     }
+    
+    private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
+        String textInput = textArea.getText().trim();
+        textArea.setText("");
+        
+        int aux;
+        String auxStr = "";
+
+        if (textInput.contains("Usuários desligados:")) {
+            int indiceDesligado = textInput.indexOf("Usuários desligados:");
+
+            String infoDesligado = "";
+
+            for (int i = indiceDesligado; i < textInput.length(); i++) {
+                infoDesligado += textInput.charAt(i);
+            }
+
+            textInput = infoDesligado.replaceAll("Atenciosamente,", "");
+            textInput = textInput.replaceAll("Sistema de Acessos e Manutenção de Usuários", "");
+
+        }
+
+        int i = textInput.indexOf("Usuários desligados:") + "Usuários desligados:\n".length();
+
+        for (; i < textInput.length(); i++) {
+
+            String userInfo = "";
+
+            while ((textInput.charAt(i) != '\n') && (i < textInput.length()-1)) {
+                userInfo += textInput.charAt(i);
+                i++;
+            }
+
+            if (userInfo.contains("User ID.............. ")) {
+                userId = "";
+                userId = userInfo.replace("User ID.............. ", "");
+                userId = userId.replace(Character.toString(userId.charAt(userId.length() - 1)), "");
+                
+                buildResult();
+            } 
+
+        }
+        
+    }//GEN-LAST:event_btnConvertActionPerformed
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        textArea.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
     private javax.swing.JPanel deleteUserWindowPanel;
-    private javax.swing.JTextPane inputTextPane;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane textArea;
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
