@@ -28,6 +28,7 @@ public class AlterUserWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         radioSamu = new javax.swing.JRadioButton();
         radioMainframe = new javax.swing.JRadioButton();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(776, 468));
@@ -71,6 +72,8 @@ public class AlterUserWindow extends javax.swing.JFrame {
         dataFontGroup.add(radioMainframe);
         radioMainframe.setText("Relatório Mainframe");
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout alterUserWindowPanelLayout = new javax.swing.GroupLayout(alterUserWindowPanel);
         alterUserWindowPanel.setLayout(alterUserWindowPanelLayout);
         alterUserWindowPanelLayout.setHorizontalGroup(
@@ -84,14 +87,16 @@ public class AlterUserWindow extends javax.swing.JFrame {
                         .addComponent(radioSamu)
                         .addGap(18, 18, 18)
                         .addComponent(radioMainframe)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(404, Short.MAX_VALUE))
                     .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
                         .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnConvert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane1)
                             .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
                                 .addComponent(titleWindow)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 459, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnInfo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnHomeWindow)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnClean)))
@@ -104,7 +109,8 @@ public class AlterUserWindow extends javax.swing.JFrame {
                 .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
                     .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                    .addComponent(btnHomeWindow)
+                    .addComponent(btnInfo))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
@@ -263,6 +269,7 @@ public class AlterUserWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.ButtonGroup dataFontGroup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;

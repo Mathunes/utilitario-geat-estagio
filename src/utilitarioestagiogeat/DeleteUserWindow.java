@@ -25,6 +25,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
         btnHomeWindow = new javax.swing.JLabel();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -54,6 +55,8 @@ public class DeleteUserWindow extends javax.swing.JFrame {
             }
         });
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout deleteUserWindowPanelLayout = new javax.swing.GroupLayout(deleteUserWindowPanel);
         deleteUserWindowPanel.setLayout(deleteUserWindowPanelLayout);
         deleteUserWindowPanelLayout.setHorizontalGroup(
@@ -65,7 +68,9 @@ public class DeleteUserWindow extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(deleteUserWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 441, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnInfo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 411, Short.MAX_VALUE)
                         .addComponent(btnHomeWindow)
                         .addGap(18, 18, 18)
                         .addComponent(btnClean)))
@@ -75,10 +80,12 @@ public class DeleteUserWindow extends javax.swing.JFrame {
             deleteUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteUserWindowPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(deleteUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWindow)
-                    .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                .addGroup(deleteUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(deleteUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(titleWindow)
+                        .addComponent(btnClean)
+                        .addComponent(btnHomeWindow))
+                    .addComponent(btnInfo))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -165,6 +172,7 @@ public class DeleteUserWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.JPanel deleteUserWindowPanel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane textArea;

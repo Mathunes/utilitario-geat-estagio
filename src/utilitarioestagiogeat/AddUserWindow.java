@@ -33,6 +33,7 @@ public class AddUserWindow extends javax.swing.JFrame {
         btnClean = new javax.swing.JButton();
         btnConvert = new javax.swing.JButton();
         btnHomeWindow = new javax.swing.JLabel();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(768, 468));
@@ -66,6 +67,8 @@ public class AddUserWindow extends javax.swing.JFrame {
             }
         });
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout addUserWindowPanelLayout = new javax.swing.GroupLayout(addUserWindowPanel);
         addUserWindowPanel.setLayout(addUserWindowPanelLayout);
         addUserWindowPanelLayout.setHorizontalGroup(
@@ -77,7 +80,9 @@ public class AddUserWindow extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(addUserWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 467, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnInfo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437, Short.MAX_VALUE)
                         .addComponent(btnHomeWindow)
                         .addGap(18, 18, 18)
                         .addComponent(btnClean)))
@@ -90,7 +95,8 @@ public class AddUserWindow extends javax.swing.JFrame {
                 .addGroup(addUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleWindow)
                     .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                    .addComponent(btnHomeWindow)
+                    .addComponent(btnInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -272,6 +278,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane textArea;
     private javax.swing.JLabel titleWindow;

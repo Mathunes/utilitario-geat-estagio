@@ -47,6 +47,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         radioNotes4 = new javax.swing.JRadioButton();
         radioNotificationAgentTrue = new javax.swing.JRadioButton();
         radioNotificationAgentFalse = new javax.swing.JRadioButton();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -111,6 +112,8 @@ public class AddCCWindow extends javax.swing.JFrame {
         notificationAgentGroup.add(radioNotificationAgentFalse);
         radioNotificationAgentFalse.setText("Não");
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout addCCWindowPanelLayout = new javax.swing.GroupLayout(addCCWindowPanel);
         addCCWindowPanel.setLayout(addCCWindowPanelLayout);
         addCCWindowPanelLayout.setHorizontalGroup(
@@ -121,6 +124,8 @@ public class AddCCWindow extends javax.swing.JFrame {
                     .addComponent(btnConvert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(addCCWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnHomeWindow)
                         .addGap(18, 18, 18)
@@ -168,10 +173,12 @@ public class AddCCWindow extends javax.swing.JFrame {
             addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addCCWindowPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWindow)
-                    .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(titleWindow)
+                        .addComponent(btnClean)
+                        .addComponent(btnHomeWindow))
+                    .addComponent(btnInfo))
                 .addGap(18, 18, 18)
                 .addGroup(addCCWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -294,6 +301,7 @@ public class AddCCWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.JTextField inputEmail;
     private javax.swing.JTextField inputID;
     private javax.swing.JTextField inputIncident;

@@ -42,6 +42,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         btnHomeWindow = new javax.swing.JLabel();
         radioNotes1 = new javax.swing.JRadioButton();
         radioNotes4 = new javax.swing.JRadioButton();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -94,6 +95,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         serverGroup.add(radioNotes4);
         radioNotes4.setText("Notes_4");
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout addUserOutWindowPanelLayout = new javax.swing.GroupLayout(addUserOutWindowPanel);
         addUserOutWindowPanel.setLayout(addUserOutWindowPanelLayout);
         addUserOutWindowPanelLayout.setHorizontalGroup(
@@ -104,6 +107,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                     .addComponent(btnConvert, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addUserOutWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnHomeWindow)
                         .addGap(18, 18, 18)
@@ -138,10 +143,12 @@ public class AddUserOutWindow extends javax.swing.JFrame {
             addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addUserOutWindowPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWindow)
-                    .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(titleWindow)
+                        .addComponent(btnClean)
+                        .addComponent(btnHomeWindow))
+                    .addComponent(btnInfo))
                 .addGap(18, 18, 18)
                 .addGroup(addUserOutWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,6 +261,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.JTextField inputCompany;
     private javax.swing.JTextField inputEmail;
     private javax.swing.JTextField inputID;

@@ -39,6 +39,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         btnHomeWindow = new javax.swing.JLabel();
         radioUserDefault = new javax.swing.JRadioButton();
         radioUserExternal = new javax.swing.JRadioButton();
+        btnInfo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -89,6 +90,8 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         buttonGroup.add(radioUserExternal);
         radioUserExternal.setText("EXTERNOS");
 
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+
         javax.swing.GroupLayout addUserIBMWindowPanelLayout = new javax.swing.GroupLayout(addUserIBMWindowPanel);
         addUserIBMWindowPanel.setLayout(addUserIBMWindowPanelLayout);
         addUserIBMWindowPanelLayout.setHorizontalGroup(
@@ -99,6 +102,8 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
                     .addComponent(btnConvert, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addUserIBMWindowPanelLayout.createSequentialGroup()
                         .addComponent(titleWindow)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnInfo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnHomeWindow)
                         .addGap(18, 18, 18)
@@ -131,10 +136,12 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
             addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addUserIBMWindowPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWindow)
-                    .addComponent(btnClean)
-                    .addComponent(btnHomeWindow))
+                .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(titleWindow)
+                        .addComponent(btnClean)
+                        .addComponent(btnHomeWindow))
+                    .addComponent(btnInfo))
                 .addGap(18, 18, 18)
                 .addGroup(addUserIBMWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputID, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -240,6 +247,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnConvert;
     private javax.swing.JLabel btnHomeWindow;
+    private javax.swing.JLabel btnInfo;
     private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JTextField inputArea;
     private javax.swing.JTextField inputID;
