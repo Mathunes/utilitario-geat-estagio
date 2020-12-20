@@ -251,7 +251,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         
         Date dateNow = new Date();
         String date = new SimpleDateFormat("dd/MM/yyyy").format(dateNow);
-        String server, notificationAgent;
+        String server, notificationAgent, toSD;
 
         if (radioNotes1.isSelected())
             server = "Notes_1";
@@ -265,13 +265,68 @@ public class AddCCWindow extends javax.swing.JFrame {
         
         result = "Caixa Institucional - " + inputName.getText() + "\n" +
             inputID.getText() + "\n" +
-            "Caixa Institucional " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\cc_" + inputID.getText() + ".nsf" + "\n" +
-            "Internet Address: " + inputEmail.getText() + "\n" +
+            "Caixa Institucional " + inputName.getText() + " em " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
+            "Internet address: " + inputEmail.getText() + "\n" +
             "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
             "Responsável: " + inputResponsible.getText() + "\n" +
             date + " - " + inputIncident.getText() + "\n" +
             "Integrantes: " + inputMembers.getText() + "\n" +
             "Agente de Notificação: " + notificationAgent;
+        
+        if (notificationAgent.equals("Sim"))
+            toSD = "Ao Service Desk,\n" +
+                "\n" +
+                "Favor informar o seguinte ao solicitante:\n" +
+                "\n" +
+                "Foi criada a caixa institucional solicitada com o nome " + inputName.getText() + " em " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
+                "\n" +
+                "Foram criados os seguintes grupos de acesso à caixa institucional recém criada:\n" +
+                "\n" +
+                inputID.getText() + "[Responsaveis] - O usuário \"Responsável pela caixa\" foi incluído neste grupo de responsáveis o qual possui direitos de inclusão/exclusão de integrantes nos outros dois grupos abaixo além da permissão de incluir/excluir documentos na caixa institucional.\n" +
+                inputID.getText() + "[Editores] - Inclui/exclui documentos da caixa institucional.\n" +
+                inputID.getText() + "[Leitores] - Somente leitura/consulta de documentos da caixa institucional.\n" +
+                inputID.getText() + "[AvisoMsgs] - Grupo de pessoas que recebem aviso de chegada de mensagens numa caixa postal corporativa\n" +
+                "\n" +
+                "Responsável: " + inputResponsible.getText() + "\n" +
+                "\n" +
+                "Integrantes: " + inputMembers.getText() + "\n" +
+                "\n" +
+                "Favor orientar o solicitante quanto à forma de utilização e edição dos referidos grupos acima dentro da lista de endereços do BNDES.\n" +
+                "\n" +
+                "O id da caixa foi copiado para a pasta do drive H:\\Notes dos usuários responsáveis \n" +
+                "\n" +
+                inputID.getText() + ".id\n" +
+                "Senha: Senha padrão conhecida.\n" +
+                "\n" +
+                "Favor orientar o solicitante na troca da senha.";
+        else
+            toSD = "Ao Service Desk,\n" +
+                "\n" +
+                "Favor informar o seguinte ao solicitante:\n" +
+                "\n" +
+                "Foi criada a caixa institucional solicitada com o nome " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\cc_" + inputID.getText() + ".nsf" + "\n" +
+                "\n" +
+                "Foram criados os seguintes grupos de acesso à caixa institucional recém criada:\n" +
+                "\n" +
+                inputID.getText() + "[Responsaveis] - O usuário \"Responsável pela caixa\" foi incluído neste grupo de responsáveis o qual possui direitos de inclusão/exclusão de integrantes nos outros dois grupos abaixo além da permissão de incluir/excluir documentos na caixa institucional.\n" +
+                inputID.getText() + "[Editores] - Inclui/exclui documentos da caixa institucional.\n" +
+                inputID.getText() + "[Leitores] - Somente leitura/consulta de documentos da caixa institucional.\n" +
+                "\n" +
+                "Responsável: " + inputResponsible.getText() + "\n" +
+                "\n" +
+                "Integrantes: " + inputMembers.getText() + "\n" +
+                "\n" +
+                "Favor orientar o solicitante quanto à forma de utilização e edição dos referidos grupos acima dentro da lista de endereços do BNDES.\n" +
+                "\n" +
+                "O id da caixa foi copiado para a pasta do drive H:\\Notes dos usuários responsáveis \n" +
+                "\n" +
+                inputID.getText() + ".id\n" +
+                "Senha: Senha padrão conhecida.\n" +
+                "\n" +
+                "Favor orientar o solicitante na troca da senha.";
+        
+        result += "\n\n------------------------------------------------ Finalizar Incidente ------------------------------------------------\n\n" 
+                + toSD;
     }
     
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
