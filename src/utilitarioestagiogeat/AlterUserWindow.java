@@ -7,6 +7,8 @@ import javax.swing.JOptionPane;
 
 public class AlterUserWindow extends javax.swing.JFrame {
 
+    InfoWindow infoFrame;
+    
     public AlterUserWindow() {
         super("Utilitário GEAT");
         initComponents();
@@ -73,6 +75,11 @@ public class AlterUserWindow extends javax.swing.JFrame {
         radioMainframe.setText("Relatório Mainframe");
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout alterUserWindowPanelLayout = new javax.swing.GroupLayout(alterUserWindowPanel);
         alterUserWindowPanel.setLayout(alterUserWindowPanelLayout);
@@ -106,11 +113,12 @@ public class AlterUserWindow extends javax.swing.JFrame {
             alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(alterUserWindowPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(titleWindow)
-                    .addComponent(btnClean)
-                    .addComponent(btnHomeWindow)
-                    .addComponent(btnInfo))
+                .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnInfo)
+                    .addGroup(alterUserWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(titleWindow)
+                        .addComponent(btnClean)
+                        .addComponent(btnHomeWindow)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
@@ -144,6 +152,10 @@ public class AlterUserWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
         
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
@@ -263,6 +275,15 @@ public class AlterUserWindow extends javax.swing.JFrame {
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Converter o texto gerado no relátorio SAMU para o script utilizado na alteração da lotação de usuário no IBM Mainframe",
+            "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
+            "Copiar o texto selecionado - <b>CTRL + C</b>",
+            "Colar o texto selecionado na área de texto - <b>CTRL + V</b>");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel alterUserWindowPanel;

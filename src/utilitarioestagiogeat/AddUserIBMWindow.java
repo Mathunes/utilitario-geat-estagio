@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class AddUserIBMWindow extends javax.swing.JFrame {
 
     private String result;
+    InfoWindow infoFrame;
 
     public AddUserIBMWindow() {
         super("Utilitário GEAT");
@@ -91,6 +92,11 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         radioUserExternal.setText("EXTERNOS");
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout addUserIBMWindowPanelLayout = new javax.swing.GroupLayout(addUserIBMWindowPanel);
         addUserIBMWindowPanel.setLayout(addUserIBMWindowPanelLayout);
@@ -191,6 +197,10 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
 
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void buildString() {
@@ -241,6 +251,15 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         inputNameTSO.setText("");
         inputPassword.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Gerar script utilizado na criação da conta de usuário no IBM Mainframe",
+            "Evitar o uso de caracter especial na senha",
+            "Se for funcionário/estagiário, o grupo é USERDFLT",
+            "Se for terceiro, o grupo é EXTERNOS");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserIBMWindowPanel;

@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 public class AddCCWindow extends javax.swing.JFrame {
 
     private String result;
+    InfoWindow infoFrame;
     
     public AddCCWindow() {
         super("Utilitário GEAT");
@@ -113,6 +114,11 @@ public class AddCCWindow extends javax.swing.JFrame {
         radioNotificationAgentFalse.setText("Não");
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout addCCWindowPanelLayout = new javax.swing.GroupLayout(addCCWindowPanel);
         addCCWindowPanel.setLayout(addCCWindowPanelLayout);
@@ -235,6 +241,10 @@ public class AddCCWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
 
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void buildString() {
@@ -295,6 +305,15 @@ public class AddCCWindow extends javax.swing.JFrame {
         inputName.setText("");
         inputResponsible.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Gerar a colinha utilizada na criação de caixa corporativa no Notes",
+            "Preencher todos os campos corretamente",
+            "Verificar no incidente se a caixa possui agente de notificação",
+            "Se for para uso interno, o email será o ID, se for para uso externo o email será o nome da caixa");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addCCWindowPanel;

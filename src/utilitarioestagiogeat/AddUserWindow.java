@@ -15,6 +15,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     private String office = "";
     private int notes = 4;
     private Boolean firstUser;
+    InfoWindow infoFrame;
     
     public AddUserWindow() {
         super("Utilitário GEAT");
@@ -68,6 +69,11 @@ public class AddUserWindow extends javax.swing.JFrame {
         });
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout addUserWindowPanelLayout = new javax.swing.GroupLayout(addUserWindowPanel);
         addUserWindowPanel.setLayout(addUserWindowPanelLayout);
@@ -125,6 +131,11 @@ public class AddUserWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
 
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
+        
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void buildResult() {
@@ -272,6 +283,15 @@ public class AddUserWindow extends javax.swing.JFrame {
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Converter o texto gerado no relátorio SAMU para a colinha utilizada na criação de usuário no Notes",
+            "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
+            "Copiar o texto selecionado - <b>CTRL + C</b>",
+            "Colar o texto selecionado na área de texto - <b>CTRL + V</b>");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserWindowPanel;

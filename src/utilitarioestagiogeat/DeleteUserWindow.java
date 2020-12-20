@@ -7,6 +7,7 @@ import java.awt.Toolkit;
 public class DeleteUserWindow extends javax.swing.JFrame {
 
     private String userId = "";
+    InfoWindow infoFrame;
     
     public DeleteUserWindow() {
         super("Utilitário GEAT");
@@ -56,6 +57,11 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         });
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout deleteUserWindowPanelLayout = new javax.swing.GroupLayout(deleteUserWindowPanel);
         deleteUserWindowPanel.setLayout(deleteUserWindowPanelLayout);
@@ -114,6 +120,10 @@ public class DeleteUserWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
 
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void buildResult() {
@@ -167,6 +177,15 @@ public class DeleteUserWindow extends javax.swing.JFrame {
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Converter o texto gerado no relátorio SAMU para o script utilizado no bloqueio da conta de usuário no IBM Mainframe",
+            "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
+            "Copiar o texto selecionado - <b>CTRL + C</b>",
+            "Colar o texto selecionado na área de texto - <b>CTRL + V</b>");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClean;

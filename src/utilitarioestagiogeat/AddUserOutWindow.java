@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 public class AddUserOutWindow extends javax.swing.JFrame {
 
     private String result;
+    InfoWindow infoFrame;
     
     public AddUserOutWindow() {
         super("Utilitário GEAT");
@@ -96,6 +97,11 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         radioNotes4.setText("Notes_4");
 
         btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInfoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout addUserOutWindowPanelLayout = new javax.swing.GroupLayout(addUserOutWindowPanel);
         addUserOutWindowPanel.setLayout(addUserOutWindowPanelLayout);
@@ -202,6 +208,10 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         HomeWindow frame = new HomeWindow();
 
         frame.setVisible(true);
+        
+        try {
+            infoFrame.dispose();
+        } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
     private void buildString() {
@@ -215,15 +225,26 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         else
             server = "Notes_4";
         
-        result = inputCompany.getText() + "." + inputName.getText() + " - Terceiro\n" +
-            inputID.getText() + "\n" +
-            "Usuário(a) " + inputCompany.getText() + "." + inputName.getText() + " criado(a) no " + server + "/BNDES externos\\cp\\cp_" + inputID.getText() + ".nsf" + "\n" +
-            "Internet Address: " + inputEmail.getText() + "\n" +
-            date + " - " + inputIncident.getText() + "\n" +
-            "Responsável: " + inputResponsible.getText() + "\n" +
-            "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
-            "CN=" + inputID.getText() + "/CN=Users/DC=bndes/DC=net\n" +
-            "\\" + "\\" + "bndes.net\\bndes\\SERVICEDESK\\ID Notes - Usuario\\" + inputID.getText();
+        if (inputCompany.getText().toLowerCase().contains("service desk"))
+            result = inputCompany.getText() + "." + inputName.getText() + " - Terceiro\n" +
+                inputID.getText() + "\n" +
+                "Usuário(a) " + inputCompany.getText() + "." + inputName.getText() + " criado(a) no " + server + "/BNDES externos\\cp\\cp_" + inputID.getText() + ".nsf" + "\n" +
+                "Internet Address: " + inputEmail.getText() + "\n" +
+                date + " - " + inputIncident.getText() + "\n" +
+                "Responsável: " + inputResponsible.getText() + "\n" +
+                "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
+                "CN=" + inputID.getText() + "/CN=Users/DC=bndes/DC=net\n" +
+                "\\" + "\\" + "bndes.net\\bndes\\SERVICEDESK\\ID Notes - Usuario\\Zoom Tecnologia\\" + inputID.getText();
+        else
+            result = inputCompany.getText() + "." + inputName.getText() + " - Terceiro\n" +
+                inputID.getText() + "\n" +
+                "Usuário(a) " + inputCompany.getText() + "." + inputName.getText() + " criado(a) no " + server + "/BNDES externos\\cp\\cp_" + inputID.getText() + ".nsf" + "\n" +
+                "Internet Address: " + inputEmail.getText() + "\n" +
+                date + " - " + inputIncident.getText() + "\n" +
+                "Responsável: " + inputResponsible.getText() + "\n" +
+                "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
+                "CN=" + inputID.getText() + "/CN=Users/DC=bndes/DC=net\n" +
+                "\\" + "\\" + "bndes.net\\bndes\\SERVICEDESK\\ID Notes - Usuario\\" + inputID.getText();
     }
     
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
@@ -255,6 +276,15 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         inputName.setText("");
         inputResponsible.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
+        infoFrame = new InfoWindow("Gerar a colinha utilizada na criação da conta de terceiros no Notes",
+            "Preencher todos os campos corretamente",
+            "Verificar no incidente a empresa do terceiro",
+            "Se for terceiro da Zoom Tecnologia é necessário preencher o campo Empresa com “Service Desk");
+
+        infoFrame.setVisible(true);
+    }//GEN-LAST:event_btnInfoMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addUserOutWindowPanel;
