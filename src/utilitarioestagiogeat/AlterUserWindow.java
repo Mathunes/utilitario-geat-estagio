@@ -163,14 +163,15 @@ public class AlterUserWindow extends javax.swing.JFrame {
         
             String textInput = textArea.getText().trim();
             textArea.setText("");
-
+            textInput += '\n';
+            
             for (int i = 0; i < textInput.length(); i++) {
 
                 String userId = "";
                 String userInfo = "";
                 String lotacao = "";
 
-                while ((textInput.charAt(i) != '\n') && (i < textInput.length()-1)) {
+                while ((textInput.charAt(i) != '\n')) {
                     userInfo += textInput.charAt(i);
                     i++;
                 }
@@ -286,7 +287,7 @@ public class AlterUserWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCleanActionPerformed
 
     private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
-        infoFrame = new InfoWindow("Converter o texto gerado no relátorio SAMU para o script utilizado na alteração da lotação de usuário no IBM Mainframe",
+        infoFrame = new InfoWindow("Converter o texto gerado no relatório mainframe filtrado ou converter o texto gerado no relatório SAMU para o script utilizado na alteração da lotação de usuário no IBM Mainframe",
             "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
             "Copiar o texto selecionado - <b>CTRL + C</b>",
             "Colar o texto selecionado na área de texto - <b>CTRL + V</b>");
