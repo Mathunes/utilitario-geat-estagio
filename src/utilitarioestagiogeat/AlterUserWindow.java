@@ -252,8 +252,17 @@ public class AlterUserWindow extends javax.swing.JFrame {
                         for (int k = firstBar; k <= lastBar; k++) {
                             aux += lotacao.charAt(k);
                         }
-
-                        lotacao = lotacao.replace(aux, "-");
+                        
+                        if (aux.contains("DESIS1") || aux.contains("DESIS2")) {
+                            aux = "";
+                            for (int k = lastBar; k < lotacao.length(); k++) {
+                                aux += lotacao.charAt(k);
+                            }
+                            lotacao = lotacao.replace(aux, "");
+                            lotacao = lotacao.replace("/", "-");
+                        }
+                        else
+                            lotacao = lotacao.replace(aux, "-");
 
                     }
                     
