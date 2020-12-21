@@ -113,7 +113,7 @@
         <Component class="javax.swing.JButton" name="btnDeleteUser">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnDeleteUserIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnDeleteUserIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -123,7 +123,7 @@
         <Component class="javax.swing.JButton" name="btnAlterUser">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnAlterUserIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnAddUserIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -133,7 +133,7 @@
         <Component class="javax.swing.JButton" name="btnAddUserIBM">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnAddUserIBMIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnAddUserIBMIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -143,7 +143,7 @@
         <Component class="javax.swing.JButton" name="btnAddCC">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnAddCCIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnAddCCIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -153,7 +153,7 @@
         <Component class="javax.swing.JButton" name="btnAddUserOut">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnAddUserOutIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnAddUserOutIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -163,7 +163,7 @@
         <Component class="javax.swing.JButton" name="btnAddUser">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/btnAddUserIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/btnAddUserIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -173,7 +173,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/utilitarioestagiogeat/githubIcon.png"/>
+              <Image iconType="3" name="/utilitarioestagiogeat/assets/githubIcon.png"/>
             </Property>
           </Properties>
           <Events>

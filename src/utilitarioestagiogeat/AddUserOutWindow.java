@@ -13,7 +13,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     InfoWindow infoFrame;
     
     public AddUserOutWindow() {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
     }
@@ -96,7 +96,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         serverGroup.add(radioNotes4);
         radioNotes4.setText("Notes_4");
 
-        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/info.png"))); // NOI18N
         btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnInfoMouseClicked(evt);
@@ -334,6 +334,6 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         radioNotes1.setFocusable(false);
         radioNotes4.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 }

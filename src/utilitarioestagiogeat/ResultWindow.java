@@ -11,7 +11,7 @@ public class ResultWindow extends javax.swing.JFrame {
     private String result;
     
     public ResultWindow(String result) {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
 
@@ -46,7 +46,7 @@ public class ResultWindow extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/close.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/close.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -120,7 +120,7 @@ public class ResultWindow extends javax.swing.JFrame {
 
         jScrollPane1.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 
     private void showResult() {

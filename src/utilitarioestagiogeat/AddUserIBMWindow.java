@@ -11,7 +11,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
     InfoWindow infoFrame;
 
     public AddUserIBMWindow() {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
     }
@@ -91,7 +91,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         buttonGroup.add(radioUserExternal);
         radioUserExternal.setText("EXTERNOS");
 
-        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/info.png"))); // NOI18N
         btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnInfoMouseClicked(evt);
@@ -307,6 +307,6 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         radioUserDefault.setFocusable(false);
         radioUserExternal.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 }

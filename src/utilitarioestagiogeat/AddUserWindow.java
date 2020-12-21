@@ -18,7 +18,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     InfoWindow infoFrame;
     
     public AddUserWindow() {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
     }
@@ -68,7 +68,7 @@ public class AddUserWindow extends javax.swing.JFrame {
             }
         });
 
-        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/info.png"))); // NOI18N
+        btnInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/info.png"))); // NOI18N
         btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnInfoMouseClicked(evt);
@@ -324,7 +324,7 @@ public class AddUserWindow extends javax.swing.JFrame {
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 
 }

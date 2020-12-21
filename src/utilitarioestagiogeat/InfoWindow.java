@@ -7,7 +7,7 @@ import java.awt.Toolkit;
 public class InfoWindow extends javax.swing.JFrame {
 
     public InfoWindow(String description, String info1, String info2, String info3) {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
         
@@ -37,16 +37,16 @@ public class InfoWindow extends javax.swing.JFrame {
 
         labelDescription.setText("Descrição");
 
-        labelInfo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/ellipse.png"))); // NOI18N
+        labelInfo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/ellipse.png"))); // NOI18N
         labelInfo3.setText("Label");
 
-        labelInfo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/ellipse.png"))); // NOI18N
+        labelInfo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/ellipse.png"))); // NOI18N
         labelInfo2.setText("Label");
 
-        labelInfo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/ellipse.png"))); // NOI18N
+        labelInfo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/ellipse.png"))); // NOI18N
         labelInfo1.setText("Label");
 
-        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/close.png"))); // NOI18N
+        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/close.png"))); // NOI18N
         btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCloseMouseClicked(evt);
@@ -141,6 +141,6 @@ public class InfoWindow extends javax.swing.JFrame {
         labelInfo3.setForeground(new Color(51, 51, 51));
         labelInfo3.setFont(new Font("Roboto", 0, 14));
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 }

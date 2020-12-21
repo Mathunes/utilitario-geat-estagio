@@ -9,7 +9,7 @@ import java.net.URL;
 public class HomeWindow extends javax.swing.JFrame {
 
     public HomeWindow() {
-        super("Utilitário GEAT");
+        super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
         stylizeComponentes();
     }
@@ -36,49 +36,49 @@ public class HomeWindow extends javax.swing.JFrame {
 
         titleWindow.setText("Utilitário GEAT");
 
-        btnDeleteUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnDeleteUserIcon.png"))); // NOI18N
+        btnDeleteUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnDeleteUserIcon.png"))); // NOI18N
         btnDeleteUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteUserActionPerformed(evt);
             }
         });
 
-        btnAlterUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAlterUserIcon.png"))); // NOI18N
+        btnAlterUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddUserIcon.png"))); // NOI18N
         btnAlterUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlterUserActionPerformed(evt);
             }
         });
 
-        btnAddUserIBM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserIBMIcon.png"))); // NOI18N
+        btnAddUserIBM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddUserIBMIcon.png"))); // NOI18N
         btnAddUserIBM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserIBMActionPerformed(evt);
             }
         });
 
-        btnAddCC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddCCIcon.png"))); // NOI18N
+        btnAddCC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddCCIcon.png"))); // NOI18N
         btnAddCC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddCCActionPerformed(evt);
             }
         });
 
-        btnAddUserOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserOutIcon.png"))); // NOI18N
+        btnAddUserOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddUserOutIcon.png"))); // NOI18N
         btnAddUserOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserOutActionPerformed(evt);
             }
         });
 
-        btnAddUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/btnAddUserIcon.png"))); // NOI18N
+        btnAddUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddUserIcon.png"))); // NOI18N
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/githubIcon.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/githubIcon.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -246,6 +246,6 @@ public class HomeWindow extends javax.swing.JFrame {
         btnAddUserOut.setBackground(new Color(255, 255, 255));
         btnAddUserOut.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
     }
 }
