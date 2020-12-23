@@ -307,6 +307,6 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
         radioUserDefault.setFocusable(false);
         radioUserExternal.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 }

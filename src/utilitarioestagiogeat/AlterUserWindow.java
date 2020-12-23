@@ -333,6 +333,6 @@ public class AlterUserWindow extends javax.swing.JFrame {
         radioSamu.setFocusable(false);
         radioMainframe.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));        
     }
 }

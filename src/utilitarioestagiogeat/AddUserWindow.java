@@ -324,7 +324,7 @@ public class AddUserWindow extends javax.swing.JFrame {
         btnHomeWindow.setFont(new Font("Roboto", Font.BOLD, 14));
         btnHomeWindow.setForeground(new Color(44, 94, 95));
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 
 }

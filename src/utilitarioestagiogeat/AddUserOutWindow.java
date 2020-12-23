@@ -334,6 +334,6 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         radioNotes1.setFocusable(false);
         radioNotes4.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 }

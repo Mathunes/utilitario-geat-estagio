@@ -426,6 +426,6 @@ public class AddCCWindow extends javax.swing.JFrame {
         radioNotificationAgentTrue.setFocusable(false);
         radioNotificationAgentFalse.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 }

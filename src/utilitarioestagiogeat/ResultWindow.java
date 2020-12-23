@@ -120,7 +120,7 @@ public class ResultWindow extends javax.swing.JFrame {
 
         jScrollPane1.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 
     private void showResult() {

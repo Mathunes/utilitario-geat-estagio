@@ -141,6 +141,6 @@ public class InfoWindow extends javax.swing.JFrame {
         labelInfo3.setForeground(new Color(51, 51, 51));
         labelInfo3.setFont(new Font("Roboto", 0, 14));
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 }

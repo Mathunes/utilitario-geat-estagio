@@ -27,6 +27,7 @@ public class HomeWindow extends javax.swing.JFrame {
         btnAddUserOut = new javax.swing.JButton();
         btnAddUser = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        version = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -85,31 +86,38 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
+        version.setText("Versão 1.0");
+
         javax.swing.GroupLayout homeWindowPanelLayout = new javax.swing.GroupLayout(homeWindowPanel);
         homeWindowPanel.setLayout(homeWindowPanelLayout);
         homeWindowPanelLayout.setHorizontalGroup(
             homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homeWindowPanelLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homeWindowPanelLayout.createSequentialGroup()
+                .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(homeWindowPanelLayout.createSequentialGroup()
-                        .addComponent(titleWindow)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
+                        .addContainerGap()
+                        .addComponent(version))
                     .addGroup(homeWindowPanelLayout.createSequentialGroup()
-                        .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddUserIBM, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
+                        .addGap(34, 34, 34)
                         .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(homeWindowPanelLayout.createSequentialGroup()
-                                .addComponent(btnAddCC, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(btnAddUserOut, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(homeWindowPanelLayout.createSequentialGroup()
-                                .addComponent(btnDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(titleWindow)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAlterUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel1))
+                            .addGroup(homeWindowPanelLayout.createSequentialGroup()
+                                .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnAddUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnAddUserIBM, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33)
+                                .addGroup(homeWindowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(homeWindowPanelLayout.createSequentialGroup()
+                                        .addComponent(btnAddCC, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(btnAddUserOut, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(homeWindowPanelLayout.createSequentialGroup()
+                                        .addComponent(btnDeleteUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnAlterUser, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(40, 40, 40))
         );
         homeWindowPanelLayout.setVerticalGroup(
@@ -129,7 +137,9 @@ public class HomeWindow extends javax.swing.JFrame {
                     .addComponent(btnAddUserIBM, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddCC, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddUserOut, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(version)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -213,6 +223,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JPanel homeWindowPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel titleWindow;
+    private javax.swing.JLabel version;
     // End of variables declaration//GEN-END:variables
 
     private void stylizeComponentes() {
@@ -246,6 +257,9 @@ public class HomeWindow extends javax.swing.JFrame {
         btnAddUserOut.setBackground(new Color(255, 255, 255));
         btnAddUserOut.setFocusable(false);
         
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets\\icon.png")));
+        version.setForeground(new Color(153, 140, 140));
+        version.setFont(new Font("Roboto", 0, 11));
+        
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 }
