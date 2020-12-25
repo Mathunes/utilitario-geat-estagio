@@ -13,6 +13,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     private String area = "";
     private String email = "";
     private String office = "";
+    private String subgroup = "";
     private int notes = 4;
     private Boolean firstUser;
     InfoWindow infoFrame;
@@ -274,9 +275,25 @@ public class AddUserWindow extends javax.swing.JFrame {
                 
                 office = office.replace(" " + auxStr, "");
                 
+            } else if (userInfo.contains("Subgrupo............. ")) {
+                subgroup = "";
+                auxStr = "";
+                subgroup = userInfo.replace("Subgrupo............. ", "");
+                
+                if (subgroup.contains("Estagiário")) {
+                    aux = subgroup.indexOf("(");
+
+                    for (int j = aux; j < subgroup.length(); j++) {
+                        auxStr += subgroup.charAt(j);
+                    }
+
+                    subgroup = subgroup.replace(" " + auxStr, "");
+                    
+                    office = subgroup;
+                }
+                
                 buildResult();
             }
-
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
