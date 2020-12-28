@@ -44,7 +44,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
-        btnAlterUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAddUserIcon.png"))); // NOI18N
+        btnAlterUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utilitarioestagiogeat/assets/btnAlterUserIcon.png"))); // NOI18N
         btnAlterUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAlterUserActionPerformed(evt);
@@ -86,7 +86,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
-        version.setText("Versão 1.2");
+        version.setText("Versão 1.3");
 
         javax.swing.GroupLayout homeWindowPanelLayout = new javax.swing.GroupLayout(homeWindowPanel);
         homeWindowPanel.setLayout(homeWindowPanelLayout);
