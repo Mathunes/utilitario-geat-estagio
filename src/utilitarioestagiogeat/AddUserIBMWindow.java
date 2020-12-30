@@ -216,7 +216,7 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
             "  name_complete: " + inputNameComplete.getText().toUpperCase() + "\n" +
             "  copy: USUAR\n" +
             "  org_unit: " + inputArea.getText().toUpperCase() + "\n" +
-            "  password: " + inputPassword.getText() + "\n" +
+            "  password: " + "\"" + inputPassword.getText() + "\"" + "\n" +
             "  group: " + group + "\n";
     }
     
