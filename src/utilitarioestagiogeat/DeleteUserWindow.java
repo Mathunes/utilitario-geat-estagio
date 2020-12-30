@@ -149,29 +149,26 @@ public class DeleteUserWindow extends javax.swing.JFrame {
             textInput = infoDesligado.replaceAll("Atenciosamente,", "");
             textInput = textInput.replaceAll("Sistema de Acessos e Manutenção de Usuários", "");
 
-        }
+            int i = textInput.indexOf("Usuários desligados:") + "Usuários desligados:\n".length();
 
-        int i = textInput.indexOf("Usuários desligados:") + "Usuários desligados:\n".length();
+            for (; i < textInput.length(); i++) {
 
-        for (; i < textInput.length(); i++) {
+                String userInfo = "";
 
-            String userInfo = "";
+                while ((textInput.charAt(i) != '\n') && (i < textInput.length()-1)) {
+                    userInfo += textInput.charAt(i);
+                    i++;
+                }
 
-            while ((textInput.charAt(i) != '\n') && (i < textInput.length()-1)) {
-                userInfo += textInput.charAt(i);
-                i++;
-            }
+                if (userInfo.contains("User ID.............. ")) {
+                    userId = "";
+                    userId = userInfo.replace("User ID.............. ", "");
+                    userId = userId.replace(Character.toString(userId.charAt(userId.length() - 1)), "");
 
-            if (userInfo.contains("User ID.............. ")) {
-                userId = "";
-                userId = userInfo.replace("User ID.............. ", "");
-                userId = userId.replace(Character.toString(userId.charAt(userId.length() - 1)), "");
-                
-                buildResult();
+                    buildResult();
+                } 
             } 
-
         }
-        
     }//GEN-LAST:event_btnConvertActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
