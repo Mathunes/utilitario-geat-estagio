@@ -165,7 +165,7 @@ public class AddUserWindow extends javax.swing.JFrame {
             firstUser = false;
         } else
             textArea.setText(textArea.getText()
-                + "\n\n" + name + " - " + office + "\n"
+                + "\n\n\n" + name + " - " + office + "\n"
                 + userId + "\n"
                 + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
                 + "Internet Address: " + email + "\n"
