@@ -163,7 +163,6 @@ public class DeleteUserWindow extends javax.swing.JFrame {
                 if (userInfo.contains("User ID.............. ")) {
                     userId = "";
                     userId = userInfo.replace("User ID.............. ", "");
-                    userId = userId.replace(Character.toString(userId.charAt(userId.length() - 1)), "");
 
                     buildResult();
                 } 
