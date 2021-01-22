@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class AddUserWindow extends javax.swing.JFrame {
 
+    //Variáveis para armazenar os dados de cada usuário antes da impressão
     private String userId = "";
     private String name = "";
     private String area = "";
@@ -16,12 +17,15 @@ public class AddUserWindow extends javax.swing.JFrame {
     private String subgroup = "";
     private int notes = 4;
     private Boolean firstUser;
+    //Tela de informações
     InfoWindow infoFrame;
     
     public AddUserWindow() {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -127,19 +131,23 @@ public class AddUserWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Método para voltar para tela inicial
     private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        //Fechando janela atual
         dispose();
 
         HomeWindow frame = new HomeWindow();
-
+        //Abrindo janela inicial
         frame.setVisible(true);
         
         try {
+            //Fechando janela de informações se estiver aberta
             infoFrame.dispose();
         } catch (Exception e) {};
         
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
+    //Método para gerar resultado final
     private void buildResult() {
         
         Date dateNow = new Date();
@@ -177,6 +185,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     
     }
     
+    //Ouvindo click do botão Converter
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         
         firstUser = true;
@@ -298,10 +307,12 @@ public class AddUserWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
+    //Método para limpar os campos de entrada
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
 
+    //Método para abrir janela de informações
     private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
         infoFrame = new InfoWindow("Converter o texto gerado no relátorio SAMU para a colinha utilizada na criação de usuário no Notes",
             "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
@@ -322,7 +333,8 @@ public class AddUserWindow extends javax.swing.JFrame {
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         addUserWindowPanel.setBackground(new Color(232, 243, 240));
         
         titleWindow.setForeground(new Color(51, 51, 51));

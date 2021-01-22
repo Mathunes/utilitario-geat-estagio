@@ -8,15 +8,18 @@ import java.awt.datatransfer.StringSelection;
 
 public class ResultWindow extends javax.swing.JFrame {
 
+    //String para receber o texto resultado gerado nos métodos de outras janelas
     private String result;
     
     public ResultWindow(String result) {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
 
         this.result = result;
-        
+        //Chamando método para adicionar resultado na tela de saída
         showResult();
     }
 
@@ -92,10 +95,12 @@ public class ResultWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Método para fechar janela
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    //Método para copiar o texto resultado para área de transferência
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         StringSelection selection = new StringSelection(result);
@@ -110,7 +115,8 @@ public class ResultWindow extends javax.swing.JFrame {
     private javax.swing.JPanel resultWindowPanel;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         resultWindowPanel.setBackground(new Color(255, 187, 192));
 
         btnConvert.setBackground(new Color(17, 125, 125));
@@ -123,6 +129,7 @@ public class ResultWindow extends javax.swing.JFrame {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("assets/icon.png")));
     }
 
+    //Método para adicionar resultado na tela de saída
     private void showResult() {
         resultPane.setText(result);
     }

@@ -6,10 +6,13 @@ import java.awt.Toolkit;
 
 public class InfoWindow extends javax.swing.JFrame {
 
+    //Recebendo no método construtor os textos informativos
     public InfoWindow(String description, String info1, String info2, String info3) {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
         
         labelDescription.setText("<html><p style=\"width:300px\">"+description+"</p></html>");
         labelInfo1.setText("<html><p style=\"width:318px\">"+info1+"</p></html>");
@@ -108,6 +111,7 @@ public class InfoWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Método para fechar janela
     private void btnCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseClicked
         dispose();
     }//GEN-LAST:event_btnCloseMouseClicked
@@ -122,7 +126,8 @@ public class InfoWindow extends javax.swing.JFrame {
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         infoWindowPanel.setBackground(new Color(255, 187, 192));
         
         titleWindow.setForeground(new Color(51, 51, 51));

@@ -9,13 +9,17 @@ import javax.swing.JOptionPane;
 
 public class AddUserOutWindow extends javax.swing.JFrame {
 
+    //String para resultado de texto final
     private String result;
+    //Tela de informações
     InfoWindow infoFrame;
     
     public AddUserOutWindow() {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -202,18 +206,22 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Método para voltar para tela inicial
     private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        //Fechando janela atual
         dispose();
 
         HomeWindow frame = new HomeWindow();
-
+        //Abrindo janela inicial
         frame.setVisible(true);
         
         try {
+            //Fechando janela de informações se estiver aberta
             infoFrame.dispose();
         } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
+    //Método para gerar resultado final
     private void buildString() {
         
         Date dateNow = new Date();
@@ -247,6 +255,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
                 "\\" + "\\" + "bndes.net\\bndes\\SERVICEDESK\\ID Notes - Usuario\\" + inputID.getText();
     }
     
+    //Ouvindo click do botão Converter
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         if (inputCompany.getText().equals("") || 
                 inputEmail.getText().equals("") ||
@@ -268,6 +277,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
+    //Método para limpar os campos de entrada
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         inputCompany.setText("");
         inputEmail.setText("");
@@ -277,6 +287,7 @@ public class AddUserOutWindow extends javax.swing.JFrame {
         inputResponsible.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
 
+    //Método para abrir janela de informações
     private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
         infoFrame = new InfoWindow("Gerar a colinha utilizada na criação da conta de terceiros no Notes",
             "Preencher todos os campos corretamente",
@@ -311,7 +322,8 @@ public class AddUserOutWindow extends javax.swing.JFrame {
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         addUserOutWindowPanel.setBackground(new Color(232, 243, 240));
         
         titleWindow.setForeground(new Color(51, 51, 51));

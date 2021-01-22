@@ -7,12 +7,15 @@ import javax.swing.JOptionPane;
 
 public class AlterUserWindow extends javax.swing.JFrame {
 
+    //Tela de informações
     InfoWindow infoFrame;
     
     public AlterUserWindow() {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -146,18 +149,22 @@ public class AlterUserWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Função para voltar para tela inicial
     private void btnHomeWindowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHomeWindowMouseClicked
+        //Fechando janela atual
         dispose();
         
         HomeWindow frame = new HomeWindow();
-        
+        //Abrindo janela inicial
         frame.setVisible(true);
         
         try {
+            //Fechando janela de informações se estiver aberta
             infoFrame.dispose();
         } catch (Exception e) {};
     }//GEN-LAST:event_btnHomeWindowMouseClicked
 
+    //Ouvindo click do botão Converter e gerando resultado final
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
         if (radioMainframe.isSelected()) {
         
@@ -206,9 +213,6 @@ public class AlterUserWindow extends javax.swing.JFrame {
                 textInput = textInput.replace(infoDesligado, "");
                 
             }
-            
-            
-            
             
             int i = textInput.indexOf("Usuários alterados:") + "Usuários alterados:\n".length();
             
@@ -282,10 +286,12 @@ public class AlterUserWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnConvertActionPerformed
 
+    //Método para limpar os campos de entrada
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
 
+    //Método para abrir janela de informações
     private void btnInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseClicked
         infoFrame = new InfoWindow("Converter o texto gerado no relatório mainframe filtrado ou converter o texto gerado no relatório SAMU para o script utilizado na alteração da lotação de usuário no IBM Mainframe",
             "Selecionar todo texto do relatório SAMU - <b>CTRL + A</b>",
@@ -310,7 +316,8 @@ public class AlterUserWindow extends javax.swing.JFrame {
     private javax.swing.JLabel titleWindow;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         alterUserWindowPanel.setBackground(new Color(232, 243, 240));
         
         titleWindow.setForeground(new Color(51, 51, 51));

@@ -9,9 +9,11 @@ import java.net.URL;
 public class HomeWindow extends javax.swing.JFrame {
 
     public HomeWindow() {
+        //Título da janela
         super("Utilitário GEAT - Gerador de colinhas");
         initComponents();
-        stylizeComponentes();
+        //Método para estilizar os componentes
+        stylizeComponents();
     }
 
     @SuppressWarnings("unchecked")
@@ -157,54 +159,67 @@ public class HomeWindow extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Método para abrir janela "Entrada de pessoal"
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+        //Fechando janela atual
         dispose();
         
         AddUserWindow frame = new AddUserWindow();
-        
+        //Abrindo janela "Entrada de pessoal"
         frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserActionPerformed
 
+    //Método para abrir janela "Alteração de pessoal"
     private void btnAlterUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterUserActionPerformed
+        //Fechando janela atual
         dispose();
         
         AlterUserWindow frame = new AlterUserWindow();
-        
+        //Abrindo janela "Alteração de pessoal"
         frame.setVisible(true);
     }//GEN-LAST:event_btnAlterUserActionPerformed
 
+    //Método para abrir janela "Desligamento de pessoal"
     private void btnDeleteUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteUserActionPerformed
+        //Fechando janela atual
         dispose();
         
         DeleteUserWindow frame = new DeleteUserWindow();
-        
+        //Abrindo janela "Desligamento de pessoal"
         frame.setVisible(true);
     }//GEN-LAST:event_btnDeleteUserActionPerformed
 
+    //Método para abrir janela "Criação de usuário IBM"
     private void btnAddUserIBMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserIBMActionPerformed
+        //Fechando janela atual
         dispose();
         
         AddUserIBMWindow frame = new AddUserIBMWindow();
-        
+        //Abrindo janela "Criação de usuário IBM"
         frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserIBMActionPerformed
 
+    //Método para abrir janela "Criação de caixa corporativa"
     private void btnAddCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCCActionPerformed
+        //Fechando janela atual
         dispose();
         
         AddCCWindow frame = new AddCCWindow();
-        
+        //Abrindo janela "Criação de caixa corporativa"
         frame.setVisible(true);
     }//GEN-LAST:event_btnAddCCActionPerformed
 
+    //Método para abrir janela "Criação de terceiro"
     private void btnAddUserOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserOutActionPerformed
+        //Fechando janela atual
         dispose();
         
         AddUserOutWindow frame = new AddUserOutWindow();
-        
+        //Abrindo janela "Criação de terceiro"
         frame.setVisible(true);
     }//GEN-LAST:event_btnAddUserOutActionPerformed
 
+    //Método para abrir projeto no github
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         //Abrindo página do github
         try {
@@ -226,7 +241,8 @@ public class HomeWindow extends javax.swing.JFrame {
     private javax.swing.JLabel version;
     // End of variables declaration//GEN-END:variables
 
-    private void stylizeComponentes() {
+    //Método para estilizar os componentes
+    private void stylizeComponents() {
         homeWindowPanel.setBackground(new Color(232, 243, 240));
         
         titleWindow.setForeground(new Color(51, 51, 51));
