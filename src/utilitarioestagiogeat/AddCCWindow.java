@@ -273,7 +273,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         
         result = "Caixa Institucional - " + inputName.getText() + "\n" +
             inputID.getText() + "\n" +
-            "Caixa Institucional " + inputName.getText() + " em " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
+            "Caixa Institucional " + inputName.getText() + " criado no " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
             "Internet address: " + inputEmail.getText() + "\n" +
             "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
             "Responsável: " + inputResponsible.getText() + "\n" +
@@ -339,8 +339,7 @@ public class AddCCWindow extends javax.swing.JFrame {
 
     //Ouvindo click do botão Converter
     private void btnConvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConvertActionPerformed
-        if (inputMembers.getText().equals("") || 
-                inputEmail.getText().equals("") ||
+        if (inputEmail.getText().equals("") ||
                 inputID.getText().equals("") ||
                 inputIncident.getText().equals("") ||
                 inputName.getText().equals("") ||
