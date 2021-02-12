@@ -243,7 +243,10 @@ public class AddUserIBMWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "name_tso tem " + inputNameTSO.getText().length() + " caracteres, deve ter no máximo 20!", "Erro", JOptionPane.ERROR_MESSAGE);
         } else if (inputNameComplete.getText().length() > 32) {
             JOptionPane.showMessageDialog(rootPane, "name_complete tem " + inputNameComplete.getText().length() + " caracteres, deve ter no máximo 32!", "Erro", JOptionPane.ERROR_MESSAGE);
-        } else {
+        } else if (inputPassword.getText().length() > 8) {
+            JOptionPane.showMessageDialog(rootPane, "Senha tem " + inputNameComplete.getText().length() + " caracteres, deve ter no máximo 8!", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+        else {
             
             buildString();
                     

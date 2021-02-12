@@ -165,7 +165,7 @@ public class AddUserWindow extends javax.swing.JFrame {
                 + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
                 + "Internet Address: " + email + "\n"
                 + "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + userId + ".id\n"
-                + date + "\n"
+                + date + " - \n"
                 + area + "\n"
                 + "CN=" + userId.toUpperCase() + "/CN=Users/DC=bndes/DC=net"
             );
@@ -173,12 +173,12 @@ public class AddUserWindow extends javax.swing.JFrame {
             firstUser = false;
         } else
             textArea.setText(textArea.getText()
-                + "\n\n\n" + name + " - " + office + "\n"
+                + "\n\n\n\n" + name + " - " + office + "\n"
                 + userId + "\n"
                 + "Usuário(a) " + name + " criado(a) no Notes_" + notes + "/BNDES BNDES\\cp\\cp_" + userId + ".nsf\n"
                 + "Internet Address: " + email + "\n"
                 + "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + userId + ".id\n"
-                + date + "\n"
+                + date + " - \n"
                 + area + "\n"
                 + "CN=" + userId.toUpperCase() + "/CN=Users/DC=bndes/DC=net"
             );
@@ -310,6 +310,7 @@ public class AddUserWindow extends javax.swing.JFrame {
     //Método para limpar os campos de entrada
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         textArea.setText("");
+        this.notes = 4;
     }//GEN-LAST:event_btnCleanActionPerformed
 
     //Método para abrir janela de informações

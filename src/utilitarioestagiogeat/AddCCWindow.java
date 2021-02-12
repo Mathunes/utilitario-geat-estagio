@@ -273,7 +273,7 @@ public class AddCCWindow extends javax.swing.JFrame {
         
         result = "Caixa Institucional - " + inputName.getText() + "\n" +
             inputID.getText() + "\n" +
-            "Caixa Institucional " + inputName.getText() + " criado no " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
+            "Caixa Institucional " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
             "Internet address: " + inputEmail.getText() + "\n" +
             "D:\\Users\\" + System.getProperty("user.name") + "\\Documents\\ID Vault\\" + inputID.getText() + ".id\n" +
             "Responsável: " + inputResponsible.getText() + "\n" +
@@ -312,7 +312,7 @@ public class AddCCWindow extends javax.swing.JFrame {
                 "\n" +
                 "Favor informar o seguinte ao solicitante:\n" +
                 "\n" +
-                "Foi criada a caixa institucional solicitada com o nome " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\cc_" + inputID.getText() + ".nsf" + "\n" +
+                "Foi criada a caixa institucional solicitada com o nome " + inputName.getText() + " criada no " + server + "/BNDES BNDES\\cc\\" + inputID.getText() + ".nsf" + "\n" +
                 "\n" +
                 "Foram criados os seguintes grupos de acesso à caixa institucional recém criada:\n" +
                 "\n" +
