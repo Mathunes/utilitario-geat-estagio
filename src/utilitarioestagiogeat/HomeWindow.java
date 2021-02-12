@@ -88,7 +88,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
-        version.setText("Versão 1.9");
+        version.setText("Versão 1.10");
 
         javax.swing.GroupLayout homeWindowPanelLayout = new javax.swing.GroupLayout(homeWindowPanel);
         homeWindowPanel.setLayout(homeWindowPanelLayout);
